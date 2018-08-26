@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "server": "nodemon app.js",
-  "start": "node app.js"
-},
+    "start": "node app.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/jingxia1219/Bart-guide-for-tourists.git"
