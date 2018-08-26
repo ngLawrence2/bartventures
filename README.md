@@ -50,8 +50,6 @@ Over the weekend, out team spent most of the time learning the new technologies 
          * By the end of Phase 5, we will have: 
             * Descriptions for each public attraction 
             * A photo for each Bart stop
- ## Wireframe
-![Wireframe](https://s15.postimg.cc/d10ve3x8r/Flex_Project_Wireframe.png)
 
 
 * Guest users are able to see live chat and logged in users are able to send messages to the live chat  
@@ -98,5 +96,5 @@ Over the weekend, out team spent most of the time learning the new technologies 
             * Descriptions for each public attraction 
             * A photo for each Bart stop
  
-
-
+ ## Wireframe
+![Wireframe](https://s15.postimg.cc/d10ve3x8r/Flex_Project_Wireframe.png)
