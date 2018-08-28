@@ -1,4 +1,4 @@
-# Welcome to BartVenture!
+# Welcome to BartVenture!!
 ## Background and Overview
    This is a Bart App targeted at tourists visiting the San Francisco Bay Area. A user can use the app to figure out where they can get to by Bart with a certain amount of money. In addition, users can look at the popular attractions near that Bart Station to better help them make up their mind where to explore. Logged in users can chat with each other while logged out users can view the chat only.
 
