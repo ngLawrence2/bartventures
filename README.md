@@ -1,12 +1,5 @@
 # Welcome to BartVenture
-## Background and Overview
-   This is a Bart App targeted at tourists visiting the San Francisco Bay Area. A user can use the app to figure out where they can get to by Bart with a certain amount of money. In addition, users can look at the popular attractions near that Bart Station to better help them make up their mind where to explore. Logged in users can chat with each other while logged out users can view the chat only.
 
-## Functionality and MVP
-* Map that shows users how far they can get with their budget on Bart.
-* Markers within the map that shows public attractions, such as parks, museums, and stores
-* Users can get more specific information of a certain public attraction,such as background and images by clicking the corresponding marker within the map
-* User authenticationa# Welcome to BartVenture!
 ## Background and Overview
    This is a Bart App targeted at tourists visiting the San Francisco Bay Area. A user can use the app to figure out where they can get to by Bart with a certain amount of money. In addition, users can look at the popular attractions near that Bart Station to better help them make up their mind where to explore. Logged in users can chat with each other while logged out users can view the chat only.
 
@@ -15,7 +8,8 @@
 * Markers within the map that shows public attractions, such as parks, museums, and stores
 * Users can get more specific information of a certain public attraction,such as background and images by clicking the corresponding marker within the map
 * User authentication
-* Guest users are able to see live chat and logged in users are able to send messages to the live chat  
+* Guest users are able to see live chat and logged in users are able to send messages to the live chat
+  
 ### Bonus
 * Display weather within the map
 * Display free events within the map
