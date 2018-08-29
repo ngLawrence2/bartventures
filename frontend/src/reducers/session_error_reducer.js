@@ -2,7 +2,8 @@
 
 import {
   GET_ERRORS,
-  RECEIVE_CURRENT_USER
+  RECEIVE_CURRENT_USER,
+  CLEAR_ERRORS
 } from '../util/session_api_util';
 
 export default (state = [], action) => {
@@ -11,6 +12,7 @@ export default (state = [], action) => {
     case GET_ERRORS:
     //change action.payload to a array
     return Object.values(action.payload);
+    case CLEAR_ERRORS:
     case RECEIVE_CURRENT_USER:
       return [];
     default:

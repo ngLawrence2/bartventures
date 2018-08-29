@@ -87,3 +87,16 @@ export const logoutUser = () => dispatch => {
   // Set current user to {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
+
+
+//Clear Errors
+export const clearErrors = () => {
+
+  return {
+    type: CLEAR_ERRORS
+  };
+}
+
+export const clearError = () => dispatch => {
+  dispatch(clearErrors());
+}

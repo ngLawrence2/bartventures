@@ -9,7 +9,6 @@ class NavBar extends React.Component {
   }
 
   displayCorrectSessionButton() {
-
     if(this.props.currentUser===undefined) {
       return (
         <div className="sessionLinks">
@@ -21,7 +20,6 @@ class NavBar extends React.Component {
       return (
         <div>
           <h1>Hello {this.props.currentUser}</h1>
-
             <button onClick= {this.props.logoutUser}>Log out</button>
         </div>
       );

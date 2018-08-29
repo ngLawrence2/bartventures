@@ -3,7 +3,7 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { registerUser } from '../../util/session_api_util';
+import { registerUser, clearError } from '../../util/session_api_util';
 import SessionForm from './session_form';
 
 const mapStateToProps = (state) => {
@@ -19,6 +19,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     processForm: (user) => dispatch(registerUser(user)),
+    clearErrors: () => dispatch(clearError())
   };
 };
 
