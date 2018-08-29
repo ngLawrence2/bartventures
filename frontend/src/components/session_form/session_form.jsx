@@ -29,30 +29,65 @@ class SessionForm extends React.Component {
 
 
   render() {
-    return (
-      <div>
-        <h2>Welcome to BartVenture</h2>
-        <form onSubmit={this.handleSubmit}>
-        <label>Enter Name:
-            <input type="text" value = {this.state.name} onChange={(e)=>this.update(e,"name")} />
-        </label>
-        <label>
-            Enter Email:
-            <input type="text" value = {this.state.email} onChange={(e)=>this.update(e,"email")}/>
-        </label>
-        <label>
-            Enter Password:
-            <input type="text"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
-        </label>
-        <label>
-            Repeat Password:
-            <input type="text" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
-        </label>
-        <input type="submit" value="Create User" />
-        </form>
-      </div>
+        const signupReq = () => {
+          if (this.props.formType.includes("Log")) {
+            return (
+              <div>
+              <form onSubmit={this.handleSubmit}>
+                <label>Email:
+                  <input
+                    placeholder="Email"
+                    type="text"
+                    value={this.state.email}
+                    onChange={(e)=>this.update(e,"email")}
+                    ></input>
+                </label>
+                <label>Password:
+                  <input
+                    placeholder="Password"
+                    type="password"
+                    value={this.state.password}
+                    onChange={(e)=>this.update(e,"password")}
+                    ></input>
+                </label>
+                <input type="submit" value="Log In"></input>
+              </form>
+              </div>
+            )
+          } else {
+            return (
+              <div>
+                <form onSubmit={this.handleSubmit}>
+                  <label>Enter Name:
+                    <input type="text" value = {this.state.name} onChange={(e)=>this.update(e,"name")} />
+                  </label>
+                  <label>
+                    Enter Email:
+                    <input type="text" value = {this.state.email} onChange={(e)=>this.update(e,"email")}/>
+                  </label>
+                  <label>
+                    Enter Password:
+                    <input type="text"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
+                  </label>
+                  <label>
+                    Repeat Password:
+                    <input type="text" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
+                  </label>
+                  <input type="submit" value="Create User" />
+                </form>
+              </div>
+          )
+        }
+      }
 
-    );
+      return (
+        <div>
+          <h2>Welcome to BartVenture</h2>
+          <div>
+            {signupReq()}
+          </div>
+        </div>
+      )
   }
 }
 

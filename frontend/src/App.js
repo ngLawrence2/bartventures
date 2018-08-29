@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SignupFormContainer from './components/session_form/signup_form_container.js';
+import LoginFormContainer from './components/session_form/login_form_container.jsx';
 import { Link } from 'react-router-dom';
+import GreetingContainer from './components/greeting_container/greeting_container.js';
+import { ProtectedRoute, AuthRoute } from './util/route_util';
 
 class App extends Component {
   render() {
@@ -16,8 +19,14 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
 
         </p>
-        <SignupFormContainer />
-        <Link to="/login">Hellooo</Link>
+        <ProtectedRoute path="/" component={GreetingContainer} />
+        <p>
+          <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
+          <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
+
+
+        </p>
+
        </div>
     );
   }
