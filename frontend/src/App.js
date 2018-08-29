@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import SignupFormContainer from './components/session_form/signup_form_container.js';
+import { Link } from 'react-router-dom';
 
 class App extends Component {
   render() {
@@ -16,7 +17,8 @@ class App extends Component {
 
         </p>
         <SignupFormContainer />
-      </div>
+        <Link to="/login">Hellooo</Link>
+       </div>
     );
   }
 }
