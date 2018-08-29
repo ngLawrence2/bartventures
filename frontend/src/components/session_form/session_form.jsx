@@ -42,11 +42,11 @@ class SessionForm extends React.Component {
         </label>
         <label>
             Enter Password:
-            <input type="text"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
+            <input type="password"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
         </label>
         <label>
             Repeat Password:
-            <input type="text" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
+            <input type="password" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
         </label>
         <input type="submit" value="Create User" />
         </form>
