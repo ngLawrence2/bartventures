@@ -80,7 +80,7 @@ class SessionForm extends React.Component {
         </label>
         <label>
             Enter Password:
-            <input type="text"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
+            <input type="password"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
         </label>
           {display}
         <input type="submit" value={this.props.buttonText} />
