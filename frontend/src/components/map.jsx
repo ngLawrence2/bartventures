@@ -32,8 +32,8 @@ class BartMap extends React.Component {
            <div className="map" ref="map">
             Is Map Showing
         <GoogleMapExample  
-        containerElement={ <div style={{ height: `500px`, width: 
-    '500px'}}/> }
+        containerElement={ <div style={{ height: `980px`, width: 
+    '750px'}}/> }
     mapElement={ <div style={{height: `100%`}} />}
         />
             </div> 
