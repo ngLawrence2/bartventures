@@ -68,58 +68,6 @@ class SessionForm extends React.Component {
 
 
   render() {
-<<<<<<< HEAD
-        const signupReq = () => {
-          if (this.props.formType.includes("Log")) {
-            return (
-              <div>
-              <form onSubmit={this.handleSubmit}>
-                <label>Email:
-                  <input
-                    placeholder="Email"
-                    type="text"
-                    value={this.state.email}
-                    onChange={(e)=>this.update(e,"email")}
-                    ></input>
-                </label>
-                <label>Password:
-                  <input
-                    placeholder="Password"
-                    type="password"
-                    value={this.state.password}
-                    onChange={(e)=>this.update(e,"password")}
-                    ></input>
-                </label>
-                <input type="submit" value="Log In"></input>
-              </form>
-              </div>
-            )
-          } else {
-            return (
-              <div>
-                <form onSubmit={this.handleSubmit}>
-                  <label>Enter Name:
-                    <input type="text" value = {this.state.name} onChange={(e)=>this.update(e,"name")} />
-                  </label>
-                  <label>
-                    Enter Email:
-                    <input type="text" value = {this.state.email} onChange={(e)=>this.update(e,"email")}/>
-                  </label>
-                  <label>
-                    Enter Password:
-                    <input type="text"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
-                  </label>
-                  <label>
-                    Repeat Password:
-                    <input type="text" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
-                  </label>
-                  <input type="submit" value="Create User" />
-                </form>
-              </div>
-          )
-        }
-      }
-=======
     const display = this.displaySignUpForms();
     const error = this.displayErrors();
     return (
@@ -142,16 +90,7 @@ class SessionForm extends React.Component {
 
 
       </div>
->>>>>>> 4cc1f9044f973242f69aa59221b2b806c8e7edf8
-
-      return (
-        <div>
-          <h2>Welcome to BartVenture</h2>
-          <div>
-            {signupReq()}
-          </div>
-        </div>
-      )
+    )
   }
 }
 
