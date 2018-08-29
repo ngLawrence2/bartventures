@@ -3,14 +3,24 @@ import { withRouter } from 'react-router-dom';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 /*global google*/
 const mapOptions = {
-  center: {
-    lat: 37.773972,
-    lng: -122.431297
-  }, 
-  zoom: 13
+    center: {
+        lat: 37.773972,
+        lng: -122.431297
+    },
+    zoom: 13
 }; 
 
 class BartMap extends React.Component {
+    constructor(props) {
+    super(props) 
+        this.state = {
+            center: {
+                lat: 37.773972,
+                lng: -122.431297
+            },
+            zoom: 13
+        };
+    }
     // initMap() {
     //     () => (
     //     map = new google.maps.Map(document.getElementById('map'), {
