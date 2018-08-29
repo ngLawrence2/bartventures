@@ -9,7 +9,8 @@ export default (state = [], action) => {
   Object.freeze(state);
   switch (action.type) {
     case GET_ERRORS:
-      return action.payload;
+    //change action.payload to a array
+    return Object.values(action.payload);
     case RECEIVE_CURRENT_USER:
       return [];
     default:

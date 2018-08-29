@@ -10,9 +10,11 @@ const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
+  
       return { id: action.payload.id,
-              handle: action.payload.handle,
-              email: action.payload.email };
+                name: action.payload.name };
+              // handle: action.payload.handle,
+              // email: action.payload.email };
     default:
       return state;
   }

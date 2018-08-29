@@ -19,7 +19,6 @@ export const setAuthToken = token => {
 
 // Register User
 export const registerUser = (userData, history) => dispatch => {
-  console.log(userData);
 
   axios
     .post('/api/users/register', userData)
@@ -80,6 +79,7 @@ export const setCurrentUser = decoded => {
 
 // Log user out
 export const logoutUser = () => dispatch => {
+
   // Remove token from localStorage
   localStorage.removeItem('jwtToken');
   // Remove auth header for future requests
