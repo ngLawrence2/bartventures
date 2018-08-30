@@ -44,13 +44,15 @@ class SessionForm extends React.Component {
   displaySignUpForms() {
     if(this.props.formType === 'signup') {
       return (
-        <div>
-          <label>Enter Name:
-              <input type="text" value = {this.state.name} onChange={(e)=>this.update(e,"name")} />
-          </label>
+        <div className='signup-group'>
           <label>
-              Repeat Password:
-              <input type="text" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
+            {/* Enter Name: */}
+              <input placeholder='First and Last Name' type="text" value = {this.state.name} onChange={(e)=>this.update(e,"name")} />
+          </label>
+          <br/>
+          <label>
+              {/* Repeat Password: */}
+              <input placeholder='Repeat Password' type="password" value = {this.state.password2} onChange={(e)=>this.update(e,"password2")} />
           </label>
         </div>
       );
@@ -74,19 +76,23 @@ class SessionForm extends React.Component {
     const error = this.displayErrors();
     return (
       <div>
-        <h2>Welcome to BartVenture</h2>
+        {/* <h2>Welcome to BartVenture</h2> */}
+        <div className='login-group' >
         <form onSubmit={this.handleSubmit}>
         <label>
-            Enter Email:
-            <input type="text" value = {this.state.email} onChange={(e)=>this.update(e,"email")}/>
+            {/* Enter Email: */}
+            <input type="text" placeholder='Email or Phone Number' value = {this.state.email} onChange={(e)=>this.update(e,"email")}/>
         </label>
+        <br/>
         <label>
-            Enter Password:
-            <input type="password"  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
+            {/* Enter Password: */}
+              <input type="password" placeholder='Password'  value = {this.state.password} onChange={(e)=>this.update(e,"password")} />
         </label>
+          <br/>
           {display}
         <input type="submit" value={this.props.buttonText} />
         </form>
+        </div>
         {this.props.navLink}
         {error}
 

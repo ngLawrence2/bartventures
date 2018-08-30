@@ -31,7 +31,7 @@ class NavBar extends React.Component {
     const displayLinks = this.displayCorrectSessionButton();
     return (
       <div>
-        <h1>Bart Ventures</h1>
+        <h1 className='header'>Bart Ventures</h1>
         {displayLinks}
 
       </div>
