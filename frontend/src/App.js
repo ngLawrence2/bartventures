@@ -10,9 +10,11 @@ const App = () => {
   return (
     <div>
       <NavBarContainer/>
+
       <Switch>
         <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
         <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
+        <AuthRoute exact path="/splash" component={NavBarContainer}></AuthRoute>
         <Route path = "/" component={BartMap} />
       </Switch>
     </div>

@@ -100,3 +100,9 @@ export const clearErrors = () => {
 export const clearError = () => dispatch => {
   dispatch(clearErrors());
 }
+
+// Search destinations
+// export const fetchRoutes = (budget, location) => dispatch => {
+//   axios.get('api/search/:budget/:loc')
+// };
+//
