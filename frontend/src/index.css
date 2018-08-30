@@ -34,13 +34,23 @@ div.sessionLinks {
 }
 
 
-input[type=text].budget {
-  /* position: absolute; */
-  z-index: 26;
-  margin-left: 40%;
-  margin-top: -15px;
+form.budget {
+  opacity: 0.9;
+  position: fixed;
+  max-width: 130px;
+  z-index: 32;
+  margin-left: 1.5%;
+  margin-top: 25%;
   height: 25px;
   margin-right: 5px;
+}
+button.budget {
+  margin-top: -2px;
+  margin-left: 3px;
+}
+
+input[type=text].budget {
+  max-width: 130px;
 }
 
 button.logout-button {
