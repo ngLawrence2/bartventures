@@ -92,8 +92,8 @@ class SessionForm extends React.Component {
           {error}
         <input type="submit" value={this.props.buttonText} />
         </form>
-        </div>
         {this.props.navLink}
+        </div>
 
 
 
