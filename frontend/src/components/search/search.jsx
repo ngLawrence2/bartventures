@@ -25,7 +25,7 @@ class Search extends React.Component {
 
     return <div>
         <form className="budget">
-          <input type="text" className="budget" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter budget" />
+          $<input type="text" className="budget" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter budget" />
           <button className='budget' onClick={this.handleSubmit}>Show results!</button>
         </form>
       </div>;

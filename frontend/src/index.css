@@ -50,6 +50,7 @@ button.budget {
 }
 
 input[type=text].budget {
+  margin-top: 3px;
   max-width: 130px;
 }
 
