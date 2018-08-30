@@ -40,7 +40,7 @@ class BartMap extends React.Component {
         ))
         return (
            <div className="map" ref="map">
-            Is Map Showing
+            {/* Is Map Showing */}
         <GoogleMapExample  
         containerElement={ <div style={{ height: `980px`, width: 
     '750px'}}/> }

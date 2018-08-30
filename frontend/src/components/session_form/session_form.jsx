@@ -74,7 +74,7 @@ class SessionForm extends React.Component {
     const error = this.displayErrors();
     return (
       <div>
-        <h2>Welcome to BartVenture</h2>
+        {/* <h2>Welcome to BartVenture</h2> */}
         <div className='login-group' >
         <form onSubmit={this.handleSubmit}>
         <label>
