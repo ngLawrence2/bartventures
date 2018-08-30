@@ -46,12 +46,15 @@ class BartMap extends React.Component {
             </ GoogleMap>
         ))
         return (
-           <div className="map-container" ref="map">
+            <div className="map-container" ref="map">
 
-        <GoogleMapExample className='google-map'
-                    containerElement={<div className='map' style={{ width: `64%`, height: `90%`}}/> }
-    mapElement={ <div style={{height: `100%`}} />}
-        />
+                <GoogleMapExample className='google-map'
+                            containerElement={<div className='map' style={{ width: `64%`, height: `86%`}}/> }
+                            mapElement={ <div style={{height: `100%`}} />}
+                />
+                <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide 
+                    people with information on where a certain budget can get you to by Bart. 
+                </span>
             </div>
 
 
