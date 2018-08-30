@@ -30,6 +30,7 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
+    debugger;
     this.props.clearErrors();
   }
 
@@ -37,8 +38,6 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    //redirect to splash page after log in
-    this.props.history.push('/splash');
   }
 
   displaySignUpForms() {
@@ -90,11 +89,12 @@ class SessionForm extends React.Component {
         </label>
           <br/>
           {display}
+          {error}
         <input type="submit" value={this.props.buttonText} />
         </form>
         </div>
         {this.props.navLink}
-        {error}
+
 
 
       </div>
