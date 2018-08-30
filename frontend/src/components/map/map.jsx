@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 /*global google*/
 const mapOptions = {
-
   center: {
     lat: 37.773972,
     lng: -122.431297
@@ -35,29 +34,23 @@ class BartMap extends React.Component {
     render() {
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
-
             defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
             defaultZoom = { 11 }
-
-            defaultCenter = { { lat: 37.801239, lng: -122.258301 }}
-            defaultZoom = { 10 }
-
             >
             </ GoogleMap>
         ))
         return (
            <div className="map" ref="map">
-
             Is Map Showing
         <GoogleMapExample
-        containerElement={ <div style={{ height: `980px`, width:'750px'}}/> }
+        containerElement={ <div style={{ height: `980px`, width:
+    '750px'}}/> }
     mapElement={ <div style={{height: `100%`}} />}
         />
             </div>
-
-
         );
     }
 }
+export default BartMap;
 
-export default withRouter(BartMap);
+// export default withRouter(BartMap);
