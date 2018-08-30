@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
     //redirect to splash page after log in
-    this.props.history.push('/splash');
+    this.props.history.push('/');
   }
 
   displaySignUpForms() {
