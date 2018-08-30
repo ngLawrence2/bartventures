@@ -5,12 +5,14 @@ import LoginFormContainer from './components/session_form/login_form_container.j
 import NavBarContainer from './components/navBar/navBarContainer.js';
 import BartMap from './components/map.jsx';
 import { ProtectedRoute, AuthRoute } from './util/route_util';
+import SearchContainer from './components/search/search_container.js';
 // <AuthRoute exact path="/splash" component={NavBarContainer}></AuthRoute>
 
 const App = () => {
   return (
     <div>
       <NavBarContainer/>
+      <SearchContainer/>
 
       <Switch>
         <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
