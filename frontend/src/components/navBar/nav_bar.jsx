@@ -10,12 +10,15 @@ class NavBar extends React.Component {
 
   displayCorrectSessionButton() {
     if(this.props.currentUser===undefined) {
-      return (
-        <div className="sessionLinks">
-          <Link to = "/login">Log in!</Link>
-          <Link to = "/signup">Sign Up!</Link>
-        </div>
-      );
+      return <div className="sessionLinks">
+          <span className="login">
+            <Link to="/login">Log in!</Link>
+          </span>
+          <div className='or' >Or</div>
+          <Link className="signup" to="/signup">
+            Sign Up!
+          </Link>
+        </div>;
     } else {
       return (
         <div className='greeting'>

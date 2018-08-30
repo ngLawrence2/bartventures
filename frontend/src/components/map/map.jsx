@@ -3,7 +3,6 @@ import { withRouter } from 'react-router-dom';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 /*global google*/
 const mapOptions = {
-
   center: {
     lat: 37.773972,
     lng: -122.431297
@@ -35,13 +34,8 @@ class BartMap extends React.Component {
     render() {
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
-
             defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
             defaultZoom = { 11 }
-
-            defaultCenter = { { lat: 37.801239, lng: -122.258301 }}
-            defaultZoom = { 10 }
-
             >
             </ GoogleMap>
         ))
@@ -49,17 +43,16 @@ class BartMap extends React.Component {
             <div className="map-container" ref="map">
 
                 <GoogleMapExample className='google-map'
-                            containerElement={<div className='map' style={{ width: `64%`, height: `86%`}}/> }
+                            containerElement={<div className='map' style={{ width: `64%`, height: `87%`}}/> }
                             mapElement={ <div style={{height: `100%`}} />}
                 />
                 <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide 
                     people with information on where a certain budget can get you to by Bart. 
                 </span>
             </div>
-
-
         );
     }
 }
+export default BartMap;
 
-export default withRouter(BartMap);
+// export default withRouter(BartMap);

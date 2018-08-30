@@ -12,12 +12,42 @@ body {
   background: no-repeat center center fixed url("https://wallpapermemory.com/uploads/433/san-francisco-background-hd-1080p-493254.jpg");
 }
 
-/* button.logout-button {
+div.or {
+  cursor: initial;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div.sessionLinks:hover {
+  cursor: pointer;
+}
+
+div.sessionLinks {
+  width: auto;
+  align-content: space-between;
+  display: flex;
+  text-align: center;
+  z-index: 30;
+  background: none;
+  margin-left: 80%;
+  margin-top: -50px;
+
+}
+
+
+input[type=text].budget {
+  z-index: 26;
+  margin-left: 40%;
+  margin-top: -20px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+button.logout-button {
   position: absolute;
-  margin-top: 5px;
+  margin-top: 10px;
   z-index: 20;
   height: 20px;
-} */
+}
 
 div.greeting {
   z-index: 22;
@@ -32,7 +62,7 @@ div.map {
   /* margin-left: 5px; */
   max-width: 630px;
   /* height: 100%; */
-  z-index: 9;
+  /* z-index: 9; */
   position: fixed;
   top: 79px;
   border: 1px solid black;
@@ -43,6 +73,7 @@ div.map {
 
 
 span.disclaimer {
+  border-top: 1px solid lightgrey;
   left: clear;
   position: absolute;
   background-color: #4286f4;
@@ -59,6 +90,7 @@ span.disclaimer {
 
 div.map-container {
   display: flex;
+  background-color: white;
 }
 
 h1.current-user {
@@ -68,9 +100,9 @@ h1.current-user {
 }
 
 h1.header {
-  opacity: 0.3;
+  /* opacity: 0.3; */
   border-bottom: 4px solid black;
-   position: fixed;
+   /* position: fixed; */
    top: 0;
    z-index: 10;
   height: 40px;
