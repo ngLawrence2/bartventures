@@ -10,6 +10,7 @@ const App = () => {
   return (
     <div>
       <NavBarContainer/>
+      <Route path="/" component={BartMap}></Route>
       <Switch>
         <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
         <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
