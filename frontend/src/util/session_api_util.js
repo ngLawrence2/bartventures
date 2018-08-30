@@ -100,3 +100,7 @@ export const clearErrors = () => {
 export const clearError = () => dispatch => {
   dispatch(clearErrors());
 }
+
+// Search destinations
+
+//
