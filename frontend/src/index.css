@@ -24,9 +24,10 @@ h1.header {
     position:absolute;
     top: 50%;
     left: 50%;
+    border-radius: 1%;
     /* width:30em; */
     /* height:18em; */
-    margin-top: -6em; /*set to a negative number 1/2 of your height*/
+    margin-top: -5em; /*set to a negative number 1/2 of your height*/
     margin-left: -12em; /*set to a negative number 1/2 of your width*/
     border: 1px solid #ccc;
     background-color: #f3f3f3;
@@ -35,7 +36,7 @@ h1.header {
     /* margin-left: 30%; */
     margin-right: 30%;
     padding-left:  42px;
-    padding-top: 46px;
+    padding-top: 55px;
     padding-bottom: 44px;
 }
 
