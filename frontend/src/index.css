@@ -12,12 +12,38 @@ body {
   background: no-repeat center center fixed url("https://wallpapermemory.com/uploads/433/san-francisco-background-hd-1080p-493254.jpg");
 }
 
-GoogleMapExample.google-map {
-  border: 5px solid black;
+button.logout-button {
+  z-index: 12;
+  height: 20px;
+}
+
+div.map {
+  /* margin: 20px 8px 40px 20px; */
+  /* margin-left: 5px; */
+  max-width: 600px;
+  height: 100%;
+  z-index: 9;
+  position: fixed;
+  top: 84px;
+  border: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  /* padding: 0 0 0 0; */
+}
+
+h1.current-user {
+  position: fixed;
+  top: 35px;
+  z-index: 11;
 }
 
 h1.header {
+  border-bottom: 4px solid black;
+   position: fixed;
+   top: 0;
+   z-index: 10;
   height: 48px;
+  width: 100%;
   /* text-align: center; */
   padding-left: 135px;
   padding-top: 20px;

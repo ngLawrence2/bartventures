@@ -46,11 +46,10 @@ class BartMap extends React.Component {
             </ GoogleMap>
         ))
         return (
-           <div className="map" ref="map">
+           <div className="map-container" ref="map">
 
-            Is Map Showing
-        <GoogleMapExample
-        containerElement={ <div style={{ height: `980px`, width:'750px'}}/> }
+        <GoogleMapExample className='google-map'
+                    containerElement={<div className='map' style={{ width: `64%`, height: `90%`}}/> }
     mapElement={ <div style={{height: `100%`}} />}
         />
             </div>
