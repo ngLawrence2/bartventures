@@ -102,5 +102,7 @@ export const clearError = () => dispatch => {
 }
 
 // Search destinations
-
+// export const fetchRoutes = (budget, location) => dispatch => {
+//   axios.get('api/search/:budget/:loc')
+// };
 //

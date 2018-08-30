@@ -31,7 +31,7 @@ router.get("/:budget/:loc", (req,res) => {
           let priceDiff = farePriceToDest - req.params.budget;
           if (priceDiff <= 0) {
             promiseArray.push(station);
-            console.log("orig : "+ req.params.loc + " dest: " + station.abbr + "fare: "+ farePriceToDest );
+            console.log("orig : "+ req.params.loc + " dest: " + station.abbr + " fare: "+ farePriceToDest );
             // console.log(farePriceToDest + " " + station.abbr);
           }
       });
