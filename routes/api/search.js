@@ -4,6 +4,10 @@ const axios = require('axios');
 const router =  express.Router();
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> b6220034b4cbcbcca1e3e769fecaf1cb2621188b
 router.get("/:budget/:loc", (req,res) => {
   let stations = [];
 <<<<<<< HEAD
@@ -41,34 +45,32 @@ router.get("/:budget/:loc", (req,res) => {
        };
        stations.push(stationObj);
      }
+
     let promiseArray = [];
     stations.forEach(station => {
-      // promiseArray.push(axios.get("url"))
-    //  console.log(station);
       let fareAPIUrl = "http://api.bart.gov/api/sched.aspx?cmd=fare&orig=" + req.params.loc +"&dest=" + station.abbr + "&date=today&key=QMBS-5LIW-9J2T-DWE9&json=y";
-    //  console.log(fareAPIUrl);
-      axios.get(fareAPIUrl).then((fareResponse) => {
+      promiseArray.push(axios.get(fareAPIUrl).then((fareResponse) => {
           let farePriceToDest = fareResponse.data.root.trip.fare;
-          // console.log("orig : "+ req.params.loc + " dest: " + station.abbr + "fare: "+ farePriceToDest );
-          // console.log(farePriceToDest <= req.params.budget);
           let priceDiff = farePriceToDest - req.params.budget;
           if (priceDiff <= 0) {
-            promiseArray.push(station);
-            console.log("orig : "+ req.params.loc + " dest: " + station.abbr + "fare: "+ farePriceToDest );
-            // console.log(farePriceToDest + " " + station.abbr);
+            return station;
+          }else {
+            return null;
           }
-      });
-    })
+      }));
+    });
     return Promise.all(promiseArray);
   }).then((responseArray) => {
-    console.log(responseArray);
-    res.send(responseArray);
+    res.json(responseArray);
   }).catch( err => {
       console.log(err);
     })
+<<<<<<< HEAD
+=======
 
 >>>>>>> d957a4a485ebf12f773717e8b6b4253cd7c70e6f
 
+>>>>>>> b6220034b4cbcbcca1e3e769fecaf1cb2621188b
 });
 
 module.exports = router;
