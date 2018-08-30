@@ -12,8 +12,8 @@ body {
   background: no-repeat center center fixed url("https://wallpapermemory.com/uploads/433/san-francisco-background-hd-1080p-493254.jpg");
 }
 
-div.map {
-  border-right: 2px solid black;
+GoogleMapExample.google-map {
+  border: 5px solid black;
 }
 
 h1.header {
