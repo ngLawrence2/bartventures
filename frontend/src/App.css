@@ -1,3 +1,9 @@
+.login-group {
+    display: flex;
+    border: 1px solid black;
+}
+
+
 .App {
   text-align: center;
 }
