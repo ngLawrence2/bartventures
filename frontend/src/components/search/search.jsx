@@ -51,6 +51,11 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
+    //default when user puts a string or no value
+    if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
+      this.props.getBartStations(100,this.state.value);
+      return;
+    }
     this.props.getBartStations(this.state.budget, this.state.value);
   }
 
@@ -74,6 +79,7 @@ class Search extends React.Component {
 
   closestStation() {
     let closest = "16th St. Mission";
+    if(this.props.coords) {
     let currentLocation = { lat: this.props.coords.latitude, lng: this.props.coords.longitude};
     let distance = Math.pow(37.765062 - this.props.coords.latitude, 2) + Math.pow(-122.419694 - this.props.coords.longitude,2);
     this.getAllBartStations.forEach( bart => {
@@ -83,15 +89,11 @@ class Search extends React.Component {
       }
     }
   )
+  }
   this.setState({value: closest});
 }
 
-  componentDidMount() {
-    console.log(this.props.coords);
-    if (this.props.coords) {
-      this.closestStation();
-    }
-  }
+
 
   render() {
 
@@ -104,8 +106,10 @@ class Search extends React.Component {
        $
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
         {bartSelector}
+
          <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
        </form>
+
       </div>
     );
 
