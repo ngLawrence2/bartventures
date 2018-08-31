@@ -1,8 +1,8 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
-// import { withGoogleMap, GoogleMap } from 'react-google-maps';
+
 /*global google*/
-// 
+//
 // const currgeocoder = new google.maps.Geocoder();
 //
 // function initializeCurrent(latcurr, longcurr) {
