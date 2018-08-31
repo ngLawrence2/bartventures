@@ -25,6 +25,7 @@ router.get("/:budget/:loc", (req,res) => {
 
        //calculate which distance is shorter
        stations.push(stationObj);
+       console.log(stations);
      }
 
 

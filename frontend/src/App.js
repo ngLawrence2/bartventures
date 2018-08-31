@@ -6,16 +6,19 @@ import NavBarContainer from './components/navBar/navBarContainer.js';
 import BartMap from './components/map/map.jsx';
 import { ProtectedRoute, AuthRoute } from './util/route_util';
 import SplashPageContainer from './components/splashPageContainer.js';
+import AttractionsContainer from './components/attractions/attractionsContainer.js';
 
 
 const App = () => {
   return (
     <div>
       <NavBarContainer/>
+      <SplashPageContainer/>
 
       <Switch>
         <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
         <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
+        <Route path = "/" component={AttractionsContainer} />
         <Route path = "/" component={SplashPageContainer} />
         <Redirect to = "/" />
       </Switch>
