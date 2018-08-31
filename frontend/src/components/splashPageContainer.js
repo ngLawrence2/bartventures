@@ -3,8 +3,9 @@ import SplashPage from './splashPage.jsx';
 import {getBartStations} from '../util/map_util.js';
 
 const mapStateToProps = state => {
+
   return {
-    allBartStations: "test"
+    allBartStations: state.entities.search
   };
 }
 
