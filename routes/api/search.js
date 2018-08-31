@@ -5,8 +5,12 @@ const router =  express.Router();
 
 
 router.get("/:budget/:loc", (req,res) => {
+  //create a variable
+  let currentStation;
+
+  //create loc into a bart station
   let stations = [];
-  console.log(req.params.loc);
+
   axios.get("https://api.bart.gov/api/stn.aspx?cmd=stns&key=QMBS-5LIW-9J2T-DWE9&json=y").then((response) => {
      let keys = Object.keys(response);
      let data = response.data;
@@ -17,11 +21,18 @@ router.get("/:budget/:loc", (req,res) => {
          lat: data.root.stations.station[i].gtfs_latitude,
          lng: data.root.stations.station[i].gtfs_longitude
        };
+
+  console.log(req.params.loc);
+       //calculate which distance is shorter
        stations.push(stationObj);
+       console.log(stations);
      }
+
 
     let promiseArray = [];
     stations.forEach(station => {
+      //do not use params loc
+
       let fareAPIUrl = "http://api.bart.gov/api/sched.aspx?cmd=fare&orig=" + req.params.loc +"&dest=" + station.abbr + "&date=today&key=QMBS-5LIW-9J2T-DWE9&json=y";
       promiseArray.push(axios.get(fareAPIUrl).then((fareResponse) => {
           let farePriceToDest = fareResponse.data.root.trip.fare;
@@ -29,7 +40,9 @@ router.get("/:budget/:loc", (req,res) => {
           if (priceDiff <= 0) {
             return station;
           }else {
-            return null;
+            let tooExpensiveObj = station;
+            tooExpensiveObj.tooExpensive= true;
+            return tooExpensiveObj;
           }
       }));
     });
