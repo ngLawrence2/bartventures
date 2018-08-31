@@ -9,8 +9,6 @@ class NavBar extends React.Component {
   }
 
   displayCorrectSessionButton() {
-    console.log(document.URL.includes('login'));
-    if (!document.URL.includes('login') && !document.URL.includes('register')) {
     if(this.props.currentUser===undefined) {
       return <div className="sessionLinks">
           <span className="login">
@@ -20,6 +18,9 @@ class NavBar extends React.Component {
           <Link className="signup" to="/signup">
             Sign Up!
           </Link>
+          {/* <br/> */}
+        {/* <span className='arrow'> => </span> */}
+        {/* <span className='attractions'>to see the attractions nearby</span> */}
         </div>;
     } else {
       return (
@@ -29,13 +30,6 @@ class NavBar extends React.Component {
         </div>
       );
     }
-  } else {
-    return (
-      <div className="sessionLinks">
-        {/* <span className='logan'> Go to your next adventure by Bart</span> */}
-      </div>
-    )
-  }
   }
 
 

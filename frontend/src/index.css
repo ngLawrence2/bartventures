@@ -12,6 +12,10 @@ body {
   background: no-repeat center center fixed url("https://wallpapermemory.com/uploads/433/san-francisco-background-hd-1080p-493254.jpg");
 }
 
+span.arrow {
+  margin-left: 15px;
+}
+
 img.bc-logo {
   background-color: aliceblue;
   padding: 3px 3px 3px 3px;
@@ -33,16 +37,24 @@ div.sessionLinks:hover {
   cursor: pointer;
 }
 
-div.sessionLinks, div.logan {
-  width: auto;
+div.sessionLinks{
+  width: 500px;
+  margin-right: 10px;
   align-content: space-between;
   display: flex;
   text-align: center;
   z-index: 30;
   background: none;
   margin-left: 80%;
-  margin-top: -50px;
-
+  margin-top: -47px;
+}
+span.attractions {
+  margin-top: -2px;
+  font-size: 18px;
+  /* font-weight: bold; */
+  color: black ;
+    margin-left: 10px;
+    clear: left;
 }
 
 
@@ -128,6 +140,9 @@ h1.current-user {
 }
 
 h1.header {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  display: flex;
   /* opacity: 0.98; */
   border-bottom: 4px solid black;
    /* position: fixed; */
