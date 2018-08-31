@@ -8,6 +8,7 @@ class SplashPage extends React.Component {
     super(props);
   }
 
+  //default to get all bart stations
   componentDidMount() {
     this.props.getBartStations(100, "16TH");
   }

@@ -50,9 +50,7 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
-
-    this.props.getBartStations(this.state.budget, "16TH");
-    // this.props.getBartStations(this.state.budget,"Dsa");
+    this.props.getBartStations(this.state.budget, this.state.value);
   }
 
 
@@ -63,15 +61,13 @@ class Search extends React.Component {
   displayBartSelectorForm() {
         return (
           <select value = {this.state.value} onChange = {this.handleChange}>
-
+            {this.props.getAllBartStations.map((bart,idx) => <option key={idx} value={bart.abbr}>{bart.name}</option>)}
           </select>
         );
   }
 
-
-
   render() {
-    // this.props.getAllBartStations.forEach( bart =>  console.log(bart.name));
+
     const bartSelector = this.displayBartSelectorForm();
     return (
 
