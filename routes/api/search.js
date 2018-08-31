@@ -18,6 +18,7 @@ router.get("/:budget/:loc", (req,res) => {
          lng: data.root.stations.station[i].gtfs_longitude
        };
        stations.push(stationObj);
+       console.log(stations);
      }
 
     let promiseArray = [];

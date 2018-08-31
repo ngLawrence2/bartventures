@@ -65,17 +65,18 @@ class Search extends React.Component {
         : this.props.coords
           ?
           <div >
-            <div className="current-coords"> {this.props.coords.latitude}
+            <form className='budget'>
+              $
+              <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
+              <input className='current-location' type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
+              <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+            </form>
+            <div className="current-coords">
+              {this.props.coords.latitude}
               {this.props.coords.longitude}
             </div>
-                    <form className='budget'>
-                    $
-                      <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
-                      <input className='current-location' type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
-                      <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
-                    </form>
 
-                  </div>
+            </div>
 
           : <div>Getting the location data&hellip; </div>;
     }
