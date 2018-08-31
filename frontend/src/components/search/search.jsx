@@ -1,6 +1,5 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
-
 /*global google*/
 //
 // const currgeocoder = new google.maps.Geocoder();
@@ -53,9 +52,14 @@ class Search extends React.Component {
     return e => this.setState({[field]: e.currentTarget.value});
   }
 
+  closestStation() {
+
+  }
+
 
   render() {
-
+    console.log(stations);
+    
     return !this.props.isGeolocationAvailable
       ? <div>Your browser does not support Geolocation</div>
       : !this.props.isGeolocationEnabled
