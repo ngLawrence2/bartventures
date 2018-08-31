@@ -7,13 +7,13 @@ const mapStateToProps = state => {
   return {
     allBartStations: state.entities.search
   };
-}
+};
 
 const mapDispatchToProps = dispatch => {
 
   return {
-    getBartStations: (budget) => dispatch(getBartStations(budget,"16TH"))
+    getBartStations: (budget, loc) => dispatch(getBartStations(budget, loc))
   };
-}
+};
 
 export default connect(mapStateToProps,mapDispatchToProps)(SplashPage);

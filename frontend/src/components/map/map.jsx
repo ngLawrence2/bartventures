@@ -39,6 +39,7 @@ import React, { Component } from 'react';
     //     );
     // }
 
+<<<<<<< HEAD
 
     // render() {
     //   return(
@@ -126,6 +127,28 @@ const MapWithADirectionsRenderer = compose(
           console.error(`error fetching directions ${result}`);
         }
       });
+=======
+    render() {
+        const GoogleMapExample = withGoogleMap(props => (
+            <GoogleMap
+            defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
+            defaultZoom = { 11 }
+            >
+            </ GoogleMap>
+        ))
+        return (
+            <div className="map-container" ref="map">
+
+                <GoogleMapExample className='google-map'
+                            containerElement={<div className='map' style={{ width: `64%`, height: `87.5%`}}/> }
+                            mapElement={ <div style={{height: `100%`}} />}
+                />
+                <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide
+                    people with information on where a certain budget can get you to by Bart.
+                </span>
+            </div>
+        );
+>>>>>>> 8b44bf2fc2c761421c6a870d4892f769a8488f6d
     }
   })
 )(props =>

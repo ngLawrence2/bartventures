@@ -9,6 +9,7 @@ router.get("/:budget/:loc", (req,res) => {
   let currentStation;
   //create loc into a bart station
   let stations = [];
+  console.log(req.params.loc);
   axios.get("https://api.bart.gov/api/stn.aspx?cmd=stns&key=QMBS-5LIW-9J2T-DWE9&json=y").then((response) => {
      let keys = Object.keys(response);
      let data = response.data;

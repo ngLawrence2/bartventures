@@ -30,7 +30,6 @@ class SessionForm extends React.Component {
   }
 
   componentWillUnmount() {
-    debugger;
     this.props.clearErrors();
   }
 
@@ -92,8 +91,8 @@ class SessionForm extends React.Component {
           {error}
         <input type="submit" value={this.props.buttonText} />
         </form>
-        </div>
         {this.props.navLink}
+        </div>
 
 
 
