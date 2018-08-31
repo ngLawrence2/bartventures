@@ -1,7 +1,7 @@
 import React from 'react';
 import BartMap from './map/map.jsx';
 import Search from './search/search.jsx';
-
+import Attractions from './attractions/attractions';
 
 class SplashPage extends React.Component {
   constructor(props) {
@@ -17,6 +17,7 @@ class SplashPage extends React.Component {
     return <div>
         <Search getBartStations={this.props.getBartStations} getAllBartStations={this.props.allBarts} />
         <BartMap location={this.props.allBartStations} />
+        <Attractions  />
       </div>;
   }
 }
