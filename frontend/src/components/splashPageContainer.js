@@ -5,7 +5,8 @@ import {getBartStations} from '../util/map_util.js';
 const mapStateToProps = state => {
 
   return {
-    allBartStations: state.entities.search
+    allBartStations: state.entities.search,
+    allBarts: state.entities.allBart
   };
 };
 
