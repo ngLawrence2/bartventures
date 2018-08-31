@@ -10,17 +10,20 @@ class NavBar extends React.Component {
 
   displayCorrectSessionButton() {
     if(this.props.currentUser===undefined) {
-      return (
-        <div className="sessionLinks">
-          <Link to = "/login">Log in!</Link>
-          <Link to = "/signup">Sign Up!</Link>
-        </div>
-      );
+      return <div className="sessionLinks">
+          <span className="login">
+            <Link to="/login">Log in!</Link>
+          </span>
+          <div className='or' >Or</div>
+          <Link className="signup" to="/signup">
+            Sign Up!
+          </Link>
+        </div>;
     } else {
       return (
-        <div>
-          <h1>Hello {this.props.currentUser}</h1>
-            <button onClick= {this.props.logoutUser}>Log out</button>
+        <div className='greeting'>
+          <h1 className='current-user' >Hello {this.props.currentUser}</h1>
+            <button className='logout-button' onClick= {this.props.logoutUser}>Log out</button>
         </div>
       );
     }
@@ -29,13 +32,11 @@ class NavBar extends React.Component {
 
   render() {
     const displayLinks = this.displayCorrectSessionButton();
-    return (
-      <div>
-        <h1 className='header'>Bart Ventures</h1>
+    return <div className='nav-bar'>
+        <img className='bc-logo' src="http://sohanews.sohacdn.com/k:2016/1-1452151932916/tg-dang-co-thoi-co-vang-de-cho-trieu-tien-biet-ho-da-tinh-sai.jpg" alt="" />
+        <h1 className="header">Bart Ventures</h1>
         {displayLinks}
-
-      </div>
-    );
+      </div>;
   }
 }
 
