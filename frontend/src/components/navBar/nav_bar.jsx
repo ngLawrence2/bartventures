@@ -9,6 +9,8 @@ class NavBar extends React.Component {
   }
 
   displayCorrectSessionButton() {
+    console.log(document.URL.includes('login'));
+    if (!document.URL.includes('login') && !document.URL.includes('register')) {
     if(this.props.currentUser===undefined) {
       return <div className="sessionLinks">
           <span className="login">
@@ -27,14 +29,24 @@ class NavBar extends React.Component {
         </div>
       );
     }
+  } else {
+    return (
+      <div className="sessionLinks">
+        {/* <span className='logan'> Go to your next adventure by Bart</span> */}
+      </div>
+    )
+  }
   }
 
 
   render() {
     const displayLinks = this.displayCorrectSessionButton();
-    return <div className='nav-bar'>
-        <img className='bc-logo' src="http://sohanews.sohacdn.com/k:2016/1-1452151932916/tg-dang-co-thoi-co-vang-de-cho-trieu-tien-biet-ho-da-tinh-sai.jpg" alt="" />
-        <h1 className="header">Bart Ventures</h1>
+    return <div className="nav-bar">
+        <img className="bc-logo" src="http://sohanews.sohacdn.com/k:2016/1-1452151932916/tg-dang-co-thoi-co-vang-de-cho-trieu-tien-biet-ho-da-tinh-sai.jpg" alt="" />
+
+        <Link className='bart-ventures-link' to="/">
+          <h1 className="header">Bart Ventures</h1>
+        </Link>
         {displayLinks}
       </div>;
   }
