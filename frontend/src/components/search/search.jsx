@@ -1,6 +1,5 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
-
 /*global google*/
 //
 // const currgeocoder = new google.maps.Geocoder();
@@ -69,7 +68,10 @@ class Search extends React.Component {
         );
   }
 
+
+
   render() {
+    // this.props.getAllBartStations.forEach( bart =>  console.log(bart.name));
     const bartSelector = this.displayBartSelectorForm();
     return (
 

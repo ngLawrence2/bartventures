@@ -7,15 +7,16 @@ class SplashPage extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
+  componentDidMount() {
+    this.props.getBartStations(100, "16TH");
+  }
 
   render() {
-    return (
-      <div>
-        <Search getBartStations={this.props.getBartStations} />
+    return <div>
+        <Search getBartStations={this.props.getBartStations} getAllBartStations={this.props.allBarts} />
         <BartMap location={this.props.allBartStations} />
-      </div>
-    );
+      </div>;
   }
 }
 
