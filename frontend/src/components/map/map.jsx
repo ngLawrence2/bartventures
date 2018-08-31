@@ -24,14 +24,25 @@ class BartMap extends React.Component {
             zoom: 13
         };
     }
+    // initMap() {
+    //     () => (
+    //     map = new google.maps.Map(document.getElementById('map'), {
+    //         center: { lat: 37.773972, lng: -122.431297 },
+    //         zoom: 8
+    //     })
+    //     );
+    // }
+  
 
     render() {
         const bartData = data;
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
-              defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
-              defaultZoom = { 11 }
-            ></ GoogleMap>
+            defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
+            defaultZoom = { 11 }
+            markers= {[37.77232,-122,2321321]}
+            >
+            </ GoogleMap>
         ))
 
         return (
