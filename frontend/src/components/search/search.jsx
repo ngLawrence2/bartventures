@@ -80,7 +80,23 @@ class Search extends React.Component {
       }
   }
 
+  getDistance(stationA, stationB ) {
+    let distance = Math.pow(stationA.lat - stationB.lat,2) + Math.pow(stationA.lng - stationB.lng, 2);
+    return Math.pow(distance, 0.5);
+  }
 
+  closestStation() {
+    let closest = "16th St. Mission";
+    let currentLocation = { lat: this.props.coords.latitude, lng: this.props.coords.longitude};
+    let distance = Math.pow(37.765062 - this.props.coords.latitude, 2) + Math.pow(-122.419694 - this.props.coords.longitude,2);
+    this.getAllBartStations.forEach( bart => {
+      if ( this.getDistance(bart, currentLocation) < distance ) {
+        closest = bart.name;
+      }
+    }
+  )
+  return closest; 
+  }
 
   render() {
     // this.props.getAllBartStations.forEach( bart =>  console.log(bart.name));
