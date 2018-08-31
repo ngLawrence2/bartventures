@@ -56,29 +56,17 @@ class Search extends React.Component {
     // this.props.getBartStations(this.state.budget,"Dsa");
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(this.props.isGeolocationAvailable !== nextProps.isGeolocationAvailable) {
-      console.log('works');
-      return this.displayBartSelectorForm();
-    }
-  }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
   }
 
   displayBartSelectorForm() {
-      if(!this.props.isGeolocationAvailable) {
         return (
           <select value = {this.state.value} onChange = {this.handleChange}>
-            <option value="16TH">16TH</option>
+
           </select>
         );
-      } else {
-        return (
-          <div>Not working</div>
-        );
-      }
   }
 
   render() {
