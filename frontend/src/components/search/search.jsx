@@ -43,10 +43,8 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let currentLoc = {
-      lat: this.props.coords.latitude,
-      lng: this.props.coords.longitude
-    }
+    let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
+
     this.props.getBartStations(this.state.budget, currentLoc);
     // this.props.getBartStations(this.state.budget,"Dsa");
   }
