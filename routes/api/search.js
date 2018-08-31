@@ -39,7 +39,9 @@ router.get("/:budget/:loc", (req,res) => {
           if (priceDiff <= 0) {
             return station;
           }else {
-            return null;
+            let tooExpensiveObj = station;
+            tooExpensiveObj.tooExpensive= true;
+            return tooExpensiveObj;
           }
       }));
     });

@@ -5,7 +5,6 @@ const SearchReducer = (state=[],action) => {
   switch (action.type) {
     case RECEIVE_BART_STATIONS:
     console.log(action.bartStations);
-
       return action.bartStations;
     default:
       return state;
