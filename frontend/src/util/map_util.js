@@ -12,7 +12,7 @@ export const receiveBartStations = bartStations => {
 
 export const getBartStations = (budget, currentBartStation) => dispatch => {
   axios
-    .get(`/api/search/${budget}/16TH`)
+    .get(`/api/search/${budget}/${currentBartStation}`)
     .then( res=> {
       console.log(res);
       dispatch(receiveBartStations(res))

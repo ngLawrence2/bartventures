@@ -7,6 +7,7 @@ import BartMap from './components/map/map.jsx';
 import { ProtectedRoute, AuthRoute } from './util/route_util';
 import SplashPageContainer from './components/splashPageContainer.js';
 
+
 const App = () => {
   return (
     <div>
