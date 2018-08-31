@@ -1,16 +1,34 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
 
-// return (
-//   <div>
-//     <form>
-//       <input type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
-//       <input type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
-//       <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+/*global google*/
 //
-//     </form>
-//   </div>
-// );
+// const currgeocoder = new google.maps.Geocoder();
+//
+// function initializeCurrent(latcurr, longcurr) {
+//
+//   console.log(latcurr + "-- ######## --" + longcurr);
+//
+//   if (latcurr != '' && longcurr != '') {
+//     var myLatlng = new google.maps.LatLng(latcurr, longcurr);
+//     return getCurrentAddress(myLatlng);
+//   }
+// }
+//
+// function getCurrentAddress(location) {
+//   currgeocoder.geocode({
+//     'location': location
+//
+//   }, function(results, status) {
+//
+//     if (status == google.maps.GeocoderStatus.OK) {
+//       console.log(results[0]);
+//       $("#address").html(results[0].formatted_address);
+//     } else {
+//       alert('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
 
 
 class Search extends React.Component {
@@ -39,6 +57,7 @@ class Search extends React.Component {
 
 
   render() {
+
     return !this.props.isGeolocationAvailable
       ? <div>Your browser does not support Geolocation</div>
       : !this.props.isGeolocationEnabled
@@ -53,7 +72,6 @@ class Search extends React.Component {
                       <input type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
                       <input type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
                       <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
-
                     </form>
 
                   </div>
