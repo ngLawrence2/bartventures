@@ -8,6 +8,7 @@ import { ProtectedRoute, AuthRoute } from './util/route_util';
 import SplashPageContainer from './components/splashPageContainer.js';
 import AttractionsContainer from './components/attractions/attractionsContainer.js';
 
+
 const App = () => {
   return (
     <div>
