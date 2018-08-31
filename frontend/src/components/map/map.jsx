@@ -46,8 +46,8 @@ class BartMap extends React.Component {
                             containerElement={<div className='map' style={{ width: `64%`, height: `87.5%`}}/> }
                             mapElement={ <div style={{height: `100%`}} />}
                 />
-                <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide 
-                    people with information on where a certain budget can get you to by Bart. 
+                <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide
+                    people with information on where a certain budget can get you to by Bart.
                 </span>
             </div>
         );
