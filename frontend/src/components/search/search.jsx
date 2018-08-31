@@ -1,11 +1,23 @@
 import React from 'react';
+import {geolocated} from 'react-geolocated';
+
+// return (
+//   <div>
+//     <form>
+//       <input type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
+//       <input type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
+//       <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+//
+//     </form>
+//   </div>
+// );
 
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      budget: ''
+      budget: '',
     };
     this.update=this.update.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
@@ -13,7 +25,12 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.getBartStations(this.state.budget,"Dsa");
+    let currentLoc = {
+      lat: this.props.coords.latitude,
+      lng: this.props.coords.longitude
+    }
+    this.props.getBartStations(this.state.budget, currentLoc);
+    // this.props.getBartStations(this.state.budget,"Dsa");
   }
 
   update(field) {
@@ -22,16 +39,33 @@ class Search extends React.Component {
 
 
   render() {
+    return !this.props.isGeolocationAvailable
+      ? <div>Your browser does not support Geolocation</div>
+      : !this.props.isGeolocationEnabled
+        ? <div>Geolocation is not enabled</div>
+        : this.props.coords
+          ?
+          <div className="current-coords">
+              {this.props.coords.latitude}
+              {this.props.coords.longitude}
 
-    return (
-      <div>
-        <form>
-          <input type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="budget" />
-          <button onClick={this.handleSubmit}>Find!</button>
-        </form>
-      </div>
-    );
-  }
+                    <form>
+                      <input type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
+                      <input type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
+                      <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+
+                    </form>
+
+                  </div>
+
+          : <div>Getting the location data&hellip; </div>;
+    }
 }
 
-export default Search;
+export default geolocated({
+  positionOptions: {
+    enableHighAccuracy: false,
+  },
+  userDecisionTimeout: 5000,
+})(Search);
+// export default Search;
