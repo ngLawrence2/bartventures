@@ -7,6 +7,7 @@ const router =  express.Router();
 router.get("/:budget/:loc", (req,res) => {
   //create a variable
   let currentStation;
+  console.log(req.params.loc);
   //create loc into a bart station
   let stations = [];
   console.log(req.params.loc);
@@ -26,7 +27,7 @@ router.get("/:budget/:loc", (req,res) => {
        stations.push(stationObj);
      }
 
-     console.log(stations);
+
     let promiseArray = [];
     stations.forEach(station => {
       //do not use params loc
