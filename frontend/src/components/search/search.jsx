@@ -18,6 +18,7 @@ class Search extends React.Component {
     super(props);
     this.state = {
       budget: '',
+      location: ''
     };
     this.update=this.update.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
