@@ -1,5 +1,238 @@
+.current-coords {
+  font: blue;
+}
+
+.search-btn {
+
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* background-size: 100%;
+  background-repeat: no-repeat; */
+  /* background: url(images/bg.jpg) no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: no-repeat center center fixed url("https://wallpapermemory.com/uploads/433/san-francisco-background-hd-1080p-493254.jpg");
 }
+
+span.arrow {
+  margin-left: 15px;
+}
+
+img.bc-logo {
+  background-color: aliceblue;
+  padding: 3px 3px 3px 3px;
+  border: 1px black solid;
+  opacity: 0.9;
+  position: absolute;
+  margin-top: 12px;
+  margin-left: 26px;
+  z-index: 40;
+  height: 44px;
+}
+
+div.or {
+  cursor: initial;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div.sessionLinks:hover {
+  cursor: pointer;
+}
+
+div.sessionLinks{
+  width: 500px;
+  margin-right: 10px;
+  align-content: space-between;
+  display: flex;
+  text-align: center;
+  z-index: 30;
+  background: none;
+  margin-left: 80%;
+  margin-top: -47px;
+}
+span.attractions {
+  margin-top: -2px;
+  font-size: 18px;
+  /* font-weight: bold; */
+  color: black ;
+    margin-left: 10px;
+    clear: left;
+}
+
+
+form.budget {
+  opacity: 0.9;
+  position: fixed;
+  max-width: 100px;
+  z-index: 32;
+  margin-left: 1.5%;
+  margin-top: 20%;
+  height: 25px;
+  margin-right: 5px;
+}
+
+button.budget {
+  margin-top: -2px;
+  margin-left: 3px;
+}
+
+div.current-coords {
+  visibility:hidden;
+}
+
+input[type=text].budget {
+  margin-top: 3px;
+  max-width: 130px;
+}
+
+button.logout-button {
+  position: absolute;
+  margin-top: 10px;
+  z-index: 20;
+  height: 20px;
+}
+
+div.greeting {
+  z-index: 22;
+}
+
+div.logan {
+  width: 500px;
+}
+
+div.map {
+  clear: map;
+  /* opacity: 0.2; */
+  /* position: absolute; */
+  bottom: 50px;
+  /* margin: 20px 8px 40px 20px; */
+  /* margin-left: 5px; */
+  max-width: 635px;
+  /* height: 100%; */
+  /* z-index: 9; */
+  position: fixed;
+  top: 74px;
+  border: 1px solid black;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid black;
+  /* padding: 0 0 0 0; */
+}
+
+
+span.disclaimer {
+  border-top: 1px solid lightgrey;
+  left: clear;
+  position: absolute;
+  background-color: #4286f4;
+  text-align: center;
+  font-size: 10px;
+  color: gray;
+  padding-top: 10px;
+  background-color: white;
+  position: fixed;
+  top: 95.5%;
+  min-height: 40px;
+  width: 100%;
+}
+
+div.map-container {
+  display: flex;
+  background-color: white;
+}
+
+h1.current-user {
+  position: fixed;
+  top: 35px;
+  z-index: 25;
+}
+
+h1.header {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+  display: flex;
+  /* opacity: 0.98; */
+  border-bottom: 4px solid black;
+   /* position: fixed; */
+   top: 0;
+   z-index: 10;
+  height: 35px;
+  width: 100%;
+  /* text-align: center; */
+  padding-left: 100px;
+  padding-top: 20px;
+  padding-bottom: 16px;
+  margin: 0 0 0 0;
+  color:white;
+  background-color: #4286f4;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+  span.logan {
+    width: auto;
+    margin-right: 24px;
+    font-size: 20px;
+    margin-top: -8px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+  }
+
+a:link {
+  color: black;
+  cursor: pointer;
+  /* text-decoration: none; */
+}
+a:link.bart-ventures-link {
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+
+}
+.login-group {
+    /* margin-top: 100px;
+
+    text-align: center;
+    display: flex; */
+    width: 350px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1%;
+    /* width:30em; */
+    /* height:18em; */
+    margin-top: -7em; /*set to a negative number 1/2 of your height*/
+    margin-left: -12em; /*set to a negative number 1/2 of your width*/
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,0.8);
+    border: 1px solid black;
+    align-content: center;
+    /* margin-left: 30%; */
+    margin-right: 30%;
+    padding-left:  42px;
+    padding-top: 60px;
+    padding-bottom: 34px;
+}
+
+ Link.alternative-button {
+   background-color: black;
+ }
+
+ input[type=text], input[type=password], input[type=submit] {
+   font-size: 15px;
+  text-align: center;
+  width: 300px;
+  height: 32px;
+  margin-bottom: 20px;
+   /* margin-left: 40px; */
+ }
+
+ input[type=submit] {
+   /* padding-top: 8px; */
+   color: white;
+   background-color: #4286f4;
+ }
