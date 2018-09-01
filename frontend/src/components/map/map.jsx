@@ -23,7 +23,7 @@ class BartMap extends React.Component {
         };
     }
     // initMap() {
-    //     () => (
+    //     () => (pull
     //     map = new google.maps.Map(document.getElementById('map'), {
     //         center: { lat: 37.773972, lng: -122.431297 },
     //         zoom: 8
@@ -31,11 +31,13 @@ class BartMap extends React.Component {
     //     );
     // }
 
+
     render() {
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
             defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
             defaultZoom = { 11 }
+            markers= {[37.77232,-122,2321321]}
             >
             </ GoogleMap>
         ))
