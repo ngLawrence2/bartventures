@@ -22,19 +22,19 @@ class Attractions extends React.Component {
                 <p className="attractions-desc">Description2 here</p>
               <li>Attraction3 Photo and Title here</li>
                 <p className="attractions-desc">Description3 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction4 Photo and Title here</li>
                 <p className="attractions-desc">Description4 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction5 Photo and Title here</li>
                 <p className="attractions-desc">Description5 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction6 Photo and Title here</li>
                 <p className="attractions-desc">Description6 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction7 Photo and Title here</li>
                 <p className="attractions-desc">Description7 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction8 Photo and Title here</li>
                 <p className="attractions-desc">Description8 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction9 Photo and Title here</li>
                 <p className="attractions-desc">Description9 here</p>
-              <li>Attraction3 Title here</li>
+              <li>Attraction10 Photo and Title here</li>
                 <p className="attractions-desc">Description10 here</p>
             </ul>
           </div>
