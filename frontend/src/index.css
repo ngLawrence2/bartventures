@@ -1,13 +1,28 @@
+
+
 div.attractions-body {
+  /* text-align: center; */
   background-color: white;
-  margin-left: 52%;
-  margin-top: 1%;
+  margin-left: 50%;
+  width: 50%;
+  margin-top: 5%;
   font-size: 40px;
   color: blue;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.attractions-header {
+  text-align: center;
 }
 
 ul.test-list {
   font-size: 20px;
+  color: black;
+}
+
+p.attractions-desc {
+  font-size: 16px;
   color: black;
 }
 
@@ -43,7 +58,7 @@ img.bc-logo {
   padding: 3px 3px 3px 3px;
   border: 1px black solid;
   opacity: 0.9;
-  position: absolute;
+  position: fixed;
   margin-top: 12px;
   margin-left: 26px;
   z-index: 40;
@@ -60,6 +75,7 @@ div.sessionLinks:hover {
 }
 
 div.sessionLinks{
+  /* position:fixed; */
   width: 500px;
   margin-right: 10px;
   align-content: space-between;
@@ -101,7 +117,7 @@ div.current-coords {
 }
 
 input[type=text].budget {
-  margin-top: 3px;
+  margin-top: 23px;
   max-width: 130px;
 }
 
@@ -127,7 +143,7 @@ div.map {
   bottom: 50px;
   /* margin: 20px 8px 40px 20px; */
   /* margin-left: 5px; */
-  max-width: 635px;
+  max-width: 50%;
   /* height: 100%; */
   /* z-index: 9; */
   position: fixed;
@@ -177,9 +193,9 @@ div.header {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
   display: flex;
-  /* opacity: 0.98; */
+  /* opacity: 0.8; */
   border-bottom: 4px solid black;
-   /* position: fixed; */
+   position: fixed;
    top: 0;
    z-index: 10;
   height: 35px;
