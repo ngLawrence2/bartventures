@@ -75,7 +75,7 @@ div.sessionLinks:hover {
 }
 
 div.sessionLinks{
-  /* position:fixed; */
+  position:fixed;
   width: 500px;
   margin-right: 10px;
   align-content: space-between;
