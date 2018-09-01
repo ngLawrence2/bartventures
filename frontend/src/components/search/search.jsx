@@ -41,6 +41,7 @@ class Search extends React.Component {
     this.handleSubmit=this.handleSubmit.bind(this);
     this.displayBartSelectorForm=this.displayBartSelectorForm.bind(this);
     this.handleChange=this.handleChange.bind(this);
+    this.closestStation = this.closestStation.bind(this);
   }
 
   handleChange(e) {
@@ -51,39 +52,51 @@ class Search extends React.Component {
     e.preventDefault();
     let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
 
-    this.props.getBartStations(this.state.budget, "16TH");
-    // this.props.getBartStations(this.state.budget,"Dsa");
+    if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
+      this.props.getBartStations(100,this.state.value);
+      return;
+    }
+    this.props.getBartStations(this.state.budget, this.state.value);
   }
 
-  componentWillReceiveProps(nextProps) {
-    if(this.props.isGeolocationAvailable !== nextProps.isGeolocationAvailable) {
-      // console.log('works');
-      return this.displayBartSelectorForm();
-    }
-  }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
   }
 
   displayBartSelectorForm() {
-      if(!this.props.isGeolocationAvailable) {
         return (
           <select value = {this.state.value} onChange = {this.handleChange}>
-            <option value="16TH">16TH</option>
+            {this.props.getAllBartStations.map((bart,idx) => <option key={idx} value={bart.abbr}>{bart.name}</option>)}
           </select>
         );
-      } else {
-        return (
-          <div>Not working</div>
-        );
-      }
   }
+
+  getDistance(stationA, stationB ) {
+    let distance = Math.pow(stationA.lat - stationB.lat,2) + Math.pow(stationA.lng - stationB.lng, 2);
+    return Math.pow(distance, 0.5);
+  }
+
+  closestStation() {
+    let closest = "16th St. Mission";
+    if(this.props.coords) {
+    let currentLocation = { lat: this.props.coords.latitude, lng: this.props.coords.longitude};
+    let distance = Math.pow(37.765062 - this.props.coords.latitude, 2) + Math.pow(-122.419694 - this.props.coords.longitude,2);
+    this.getAllBartStations.forEach( bart => {
+      if ( this.getDistance(bart, currentLocation) < distance ) {
+        console.log(closest);
+        closest = bart.name;
+      }
+    }
+  )
+  }
+  this.setState({value: closest});
+}
 
 
 
   render() {
-    // this.props.getAllBartStations.forEach( bart =>  console.log(bart.name));
+
     const bartSelector = this.displayBartSelectorForm();
     return (
 
@@ -93,8 +106,10 @@ class Search extends React.Component {
        $
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
         {bartSelector}
+
          <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
        </form>
+
       </div>
     );
 
