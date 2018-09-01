@@ -13,14 +13,14 @@ const App = () => {
   return (
     <div>
       <NavBarContainer/>
-      <SplashPageContainer/>
+
 
       <Switch>
         <AuthRoute exact path="/signup" component={SignupFormContainer}></AuthRoute>
         <AuthRoute exact path="/login" component={LoginFormContainer}></AuthRoute>
-        <Route path = "/" component={AttractionsContainer} />
+
         <Route path = "/" component={SplashPageContainer} />
-        <Redirect to = "/" />
+         <Redirect to = "/" />
       </Switch>
     </div>
   );
