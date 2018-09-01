@@ -51,7 +51,7 @@ class Search extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
-    //default when user puts a string or no value
+
     if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
       this.props.getBartStations(100,this.state.value);
       return;
