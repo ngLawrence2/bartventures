@@ -1,5 +1,6 @@
 import React from 'react';
 import BartMap from '../map/map.jsx';
+import atractions from '../seeds.jsx';
 
 
 class Attractions extends React.Component {
