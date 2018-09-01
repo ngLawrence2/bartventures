@@ -1,6 +1,6 @@
 import React from 'react';
 import BartMap from '../map/map.jsx';
-import atractions from '../seeds.jsx';
+import attractions from '../seeds.jsx';
 
 
 class Attractions extends React.Component {
@@ -17,8 +17,9 @@ class Attractions extends React.Component {
           </div>
           <div>
             <ul className="test-list">
-              <li> Attraction1 Photo and Attraction1 Title here</li>
-                <p className="attractions-desc">Description1 here</p>
+              <p className="attractions-desc">{attractions[4].name}</p>
+              <li><img src={ attractions[4].image } height="400" width="600" /></li>
+                <p className="attractions-desc">{attractions[4].description}</p>
               <li>Attraction2 Photo and Title here</li>
                 <p className="attractions-desc">Description2 here</p>
               <li>Attraction3 Photo and Title here</li>
