@@ -1,7 +1,6 @@
 import React from 'react';
 import BartMap from './map/map.jsx';
 import Search from './search/search.jsx';
-import {geolocated} from 'react-geolocated';
 import AttractionsContainer from './attractions/attractionsContainer.js';
 
 class SplashPage extends React.Component {
