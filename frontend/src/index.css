@@ -63,7 +63,6 @@ div.attractions-body {
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
-  z-index: 25;
 }
 
 .attractions-explore {
