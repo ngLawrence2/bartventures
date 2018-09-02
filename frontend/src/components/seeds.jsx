@@ -9,6 +9,12 @@
 // https://s15.postimg.cc/5qhuw7d6j/UCB.jpg
 // https://s15.postimg.cc/mr0r4xnnv/union_square.jpg
 
+// https://s15.postimg.cc/doc9xzg7v/balmy_alley.jpg
+// https://s15.postimg.cc/h7y7o1j0b/salesforce.jpg
+// https://s15.postimg.cc/yb0zj9x1n/sfo.jpg
+// https://s15.postimg.cc/x8qt0tlyz/golf.jpg
+
+
 const attractions = [
   {
     name: "Oakland Chinatown",
