@@ -17,7 +17,10 @@ class Attractions extends React.Component {
           </div>
           <div>
             <ul className="test-list">
-              <br></br><br></br>
+                <p className="attractions-name">{attractions[9].name}</p>
+                  <img className="all-attraction-photos" src={ attractions[9].image } />
+                  <p className="attractions-desc">{attractions[9].description}</p>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[0].name}</p>
                   <img className="all-attraction-photos" src={attractions[0].image}/>
                   <p className="attractions-desc">{attractions[0].description}</p>
@@ -38,16 +41,9 @@ class Attractions extends React.Component {
                   <img className="all-attraction-photos" src={attractions[4].image}/>
                   <p className="attractions-desc">{attractions[4].description}</p>
                   <br></br><br></br>
-                <p className="attractions-name">{attractions[5].name}</p>
-                  <img className="all-attraction-photos" src={attractions[5].image}/>
-                  <p className="attractions-desc">{attractions[5].description}</p>
-
-              <li>Attraction8 Photo and Title here</li>
-                <p className="attractions-desc">Description8 here</p>
-              <li>Attraction9 Photo and Title here</li>
-                <p className="attractions-desc">Description9 here</p>
-              <li>Attraction10 Photo and Title here</li>
-                <p className="attractions-desc">Description10 here</p>
+                <p className="attractions-name">{attractions[13].name}</p>
+                  <img className="all-attraction-photos" src={attractions[13].image}/>
+                  <p className="attractions-desc">{attractions[13].description}</p>
             </ul>
           </div>
       </div>
