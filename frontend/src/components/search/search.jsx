@@ -35,7 +35,7 @@ class Search extends React.Component {
     super(props);
     this.state = {
       budget: '',
-      value: '16TH'
+      value: 'start'
     };
     this.update=this.update.bind(this);
     this.handleSubmit=this.handleSubmit.bind(this);
@@ -67,6 +67,7 @@ class Search extends React.Component {
   displayBartSelectorForm() {
         return (
           <select value = {this.state.value} onChange = {this.handleChange}>
+             <option value="start" disabled>Choose starting point</option>
              <option value="16TH">16th St. Mission</option>
              <option value="12TH">12th St. Oakland City Center</option>
              <option value="19TH">19th St. Oakland</option>
@@ -154,7 +155,7 @@ class Search extends React.Component {
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
         {bartSelector}
 
-         <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+         <button className="search-btn" onClick={this.handleSubmit}>Show me places to go!</button>
        </form>
 
       </div>
