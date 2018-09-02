@@ -116,6 +116,11 @@ p.attractions-desc {
 
 .search-btn {
 background: lightgreen;
+border-radius: 5px;
+}
+
+.search-btn:hover {
+  background: green;
 }
 
 body {
