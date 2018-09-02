@@ -13,8 +13,7 @@ const search = require("./routes/api/search");
 
 require('./config/passport')(passport);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('frontend/build'));
     app.get('*', (req, res) => {
@@ -22,10 +21,6 @@ if (process.env.NODE_ENV === 'production') {
     })
 }
 
-=======
->>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
-=======
->>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
 
 mongoose
     .connect(db, {useNewUrlParser: true })
