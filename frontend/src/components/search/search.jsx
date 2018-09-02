@@ -1,0 +1,193 @@
+import React from 'react';
+import {geolocated} from 'react-geolocated';
+/*global google*/
+//
+// const currgeocoder = new google.maps.Geocoder();
+//
+// function initializeCurrent(latcurr, longcurr) {
+//
+//   console.log(latcurr + "-- ######## --" + longcurr);
+//
+//   if (latcurr != '' && longcurr != '') {
+//     var myLatlng = new google.maps.LatLng(latcurr, longcurr);
+//     return getCurrentAddress(myLatlng);
+//   }
+// }
+//
+// function getCurrentAddress(location) {
+//   currgeocoder.geocode({
+//     'location': location
+//
+//   }, function(results, status) {
+//
+//     if (status == google.maps.GeocoderStatus.OK) {
+//       console.log(results[0]);
+//       $("#address").html(results[0].formatted_address);
+//     } else {
+//       alert('Geocode was not successful for the following reason: ' + status);
+//     }
+//   });
+// }
+
+
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      budget: '',
+      value: 'start'
+    };
+    this.update=this.update.bind(this);
+    this.handleSubmit=this.handleSubmit.bind(this);
+    this.displayBartSelectorForm=this.displayBartSelectorForm.bind(this);
+    this.handleChange=this.handleChange.bind(this);
+    this.closestStation = this.closestStation.bind(this);
+  }
+
+  handleChange(e) {
+      this.setState({value:e.currentTarget.value});
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
+
+    if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
+      this.props.getBartStations(100,this.state.value);
+      return;
+    }
+    this.props.getBartStations(this.state.budget, this.state.value);
+  }
+
+
+  update(field) {
+    return e => this.setState({[field]: e.currentTarget.value});
+  }
+
+  displayBartSelectorForm() {
+        return (
+          <select value = {this.state.value} onChange = {this.handleChange}>
+             <option value="start" disabled>Choose starting point</option>
+             <option value="16TH">16th St. Mission</option>
+             <option value="12TH">12th St. Oakland City Center</option>
+             <option value="19TH">19th St. Oakland</option>
+             <option value="24TH">24th St. Mission</option>
+             <option value="ANTC">Antioch</option>
+             <option value="ASHB">Ashby</option>
+             <option value="BALB">Balboa Park</option>
+             <option value="BAYF">Bay Fair</option>
+             <option value="CAST">Castro Valley</option>
+             <option value="CIVC">Civic Center/UN Plaza</option>
+             <option value="COLS">Coliseum</option>
+             <option value="COLM">Colma</option>
+             <option value="CONC">Concord</option>
+             <option value="DALY">Daly City</option>
+             <option value="DBRK">Downtown Berkeley</option>
+             <option value="DUBL">Dublin/Pleasanton</option>
+             <option value="DELN">El Cerrito del Norte</option>
+             <option value="PLZA">El Cerrito Plaza</option>
+             <option value="EMBR">Embarcadero</option>
+             <option value="FRMT">Fremont</option>
+             <option value="FTVL">Fruitvale</option>
+             <option value="GLEN">Glen Park</option>
+             <option value="HAYW">Hayward</option>
+             <option value="LAFY">Lafayette</option>
+             <option value="LAKE">Lake Merritt</option>
+             <option value="MCAR">MacArthur</option>
+             <option value="MLBR">Millbrae</option>
+             <option value="MONT">Montgomery St.</option>
+             <option value="NBRK">North Berkeley</option>
+             <option value="NCON">North Concord/Martinez</option>
+             <option value="OAKL">Oakland International Airport</option>
+             <option value="ORIN">Orinda</option>
+             <option value="PITT">Pittsburg/Bay Point</option>
+             <option value="PCTR">Pittsburg Center</option>
+             <option value="PHIL">Pleasant Hill/Contra Costa Centre</option>
+             <option value="POWL">Powell St.</option>
+             <option value="RICH">Richmond</option>
+             <option value="ROCK">Rockridge</option>
+             <option value="SBRN">San Bruno</option>
+             <option value="SFIA">San Francisco International Airport</option>
+             <option value="SANL">San Leandro</option>
+             <option value="SHAY">South Hayward</option>
+             <option value="SSAN">South San Francisco</option>
+             <option value="UCTY">Union City</option>
+             <option value="WCRK">Walnut Creek</option>
+             <option value="WARM">Warm Springs/South Fremont</option>
+             <option value="WDUB">West Dublin/Pleasanton</option>
+             <option value="WOAK">West Oakland</option>
+          </select>
+        );
+  }
+
+  getDistance(stationA, stationB ) {
+    let distance = Math.pow(stationA.lat - stationB.lat,2) + Math.pow(stationA.lng - stationB.lng, 2);
+    return Math.pow(distance, 0.5);
+  }
+
+  closestStation() {
+    let closest = "16th St. Mission";
+    if(this.props.coords) {
+    let currentLocation = { lat: this.props.coords.latitude, lng: this.props.coords.longitude};
+    let distance = Math.pow(37.765062 - this.props.coords.latitude, 2) + Math.pow(-122.419694 - this.props.coords.longitude,2);
+    this.getAllBartStations.forEach( bart => {
+      if ( this.getDistance(bart, currentLocation) < distance ) {
+        console.log(closest);
+        closest = bart.name;
+      }
+    }
+  )
+  }
+  this.setState({value: closest});
+}
+
+
+
+  render() {
+
+    const bartSelector = this.displayBartSelectorForm();
+    return (
+
+      <div>
+
+        <form className='budget'>
+       $
+         <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
+        {bartSelector}
+        
+         <button className="search-btn" onClick={this.handleSubmit}>Show me places to go!</button>
+       </form>
+
+      </div>
+    );
+
+    // return !this.props.isGeolocationAvailable
+    //   ? <div>Your browser does not support Geolocation</div>
+    //   : !this.props.isGeolocationEnabled
+    //     ? <div>Geolocation is not enabled</div>
+    //     : this.props.coords
+    //       ?
+    //       <div >
+    //         <div className="current-coords"> {this.props.coords.latitude}
+    //           {this.props.coords.longitude}
+    //         </div>
+    //                 <form className='budget'>
+    //                 $
+    //                   <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
+    //                   <input className='current-location' type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
+    //                   <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
+    //                 </form>
+    //
+    //               </div>
+    //
+    //       : <div>Getting the location data&hellip; </div>;
+    }
+}
+
+export default geolocated({
+  positionOptions: {
+    enableHighAccuracy: false,
+  },
+  userDecisionTimeout: 5000,
+})(Search);
+// export default Search;

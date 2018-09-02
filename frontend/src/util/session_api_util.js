@@ -19,7 +19,6 @@ export const setAuthToken = token => {
 
 // Register User
 export const registerUser = (userData, history) => dispatch => {
-  console.log(userData);
 
   axios
     .post('/api/users/register', userData)
@@ -80,6 +79,7 @@ export const setCurrentUser = decoded => {
 
 // Log user out
 export const logoutUser = () => dispatch => {
+
   // Remove token from localStorage
   localStorage.removeItem('jwtToken');
   // Remove auth header for future requests
@@ -87,3 +87,22 @@ export const logoutUser = () => dispatch => {
   // Set current user to {} which will set isAuthenticated to false
   dispatch(setCurrentUser({}));
 };
+
+
+//Clear Errors
+export const clearErrors = () => {
+
+  return {
+    type: CLEAR_ERRORS
+  };
+}
+
+export const clearError = () => dispatch => {
+  dispatch(clearErrors());
+}
+
+// Search destinations
+// export const fetchRoutes = (budget, location) => dispatch => {
+//   axios.get('api/search/:budget/:loc')
+// };
+//
