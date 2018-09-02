@@ -38,7 +38,7 @@ export const receiveAttractions = attractions => {
         lat: currentAttraction.lat,
         lng: currentAttraction.lng,
         description: currentAttraction.description,
-        //image: currentAttraction.image,
+        image: currentAttraction.image,
       }
       resultAttractions.push(attractionObj);
   }
