@@ -153,9 +153,9 @@ img.bc-logo {
   margin-top: 12px;
   margin-left: 26px;
   position: absolute;
-  margin-top: 2%;
+  margin-top: 21px;
   margin-bottom: 2%;
-  margin-left: 2%;
+  margin-left: 18px;
   z-index: 40;
   height: 44px;
 }
@@ -178,10 +178,10 @@ div.sessionLinks{
   /* align-content: space-between; */
   display: flex;
   text-align: center;
-  /* z-index: 26; */
+  z-index: 26;
   background: none;
   margin-left: 80%;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 span.attractions {
   margin-top: -2px;
@@ -302,18 +302,13 @@ h1.current-user {
 }
 
 div.bart-venture {
-  /* display: flex; */
-  /* width: 100px; */
-  /* align-content: space-around; */
-  margin-top: 1%;
-  margin-left: 10%;
-
-  height: 35px;
+  margin-top: 0;
+  /* margin-left: 10px; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helevetica Neue', sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 300;
-  /* background-color: #3C7BFC; */
+  width: 250px;
 }
 
 /* navbar here */
