@@ -1,3 +1,14 @@
+// https://s15.postimg.cc/kl6gahhnf/24th.jpg
+// https://s15.postimg.cc/gc1q8fgzv/Chinatown_Oakland.jpg
+// https://s15.postimg.cc/mczf5jtcb/City_Hall.jpg
+// https://s15.postimg.cc/jvnnybz63/Coliseum.jpg
+// https://s15.postimg.cc/sqoi8vitn/dolores.jpg
+// https://s15.postimg.cc/6eqpfi6uz/embarcadero.jpg
+// https://s15.postimg.cc/6ss1engjf/lake_marritt.jpg
+// https://s15.postimg.cc/g0k9vf86z/paramount.jpg
+// https://s15.postimg.cc/5qhuw7d6j/UCB.jpg
+// https://s15.postimg.cc/mr0r4xnnv/union_square.jpg
+
 const attractions = [
   {
     name: "Oakland Chinatown",
@@ -5,7 +16,7 @@ const attractions = [
     lat: "37.7986",
     lng: "-122.2668",
     description: "The Chinatown neighborhood in Oakland is a pan-Asian neighborhood which reflects Oakland's diverse Asian American community. Chinese were the first Asians to arrive in Oakland in the 1850s, followed by Japanese in the 1890s, Koreans in the 1900s, and Filipinos in the 1930s and 1940s. Southeast Asians began arriving in the 1970s during the Vietnam War. Many Asian languages and dialects can be heard in Chinatown due to its diverse population.",
-    image: require('../images/Chinatown,_Oakland.jpg')
+    image: 'https://s15.postimg.cc/gc1q8fgzv/Chinatown_Oakland.jpg'
   },
   {
     name: "Dolores Park",
