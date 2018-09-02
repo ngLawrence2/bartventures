@@ -79,6 +79,37 @@ const attractions = [
     description: "The Oakland Coliseum is a multi-purpose stadium in Oakland, which is home to both the Oakland Athletics of Major League Baseball (MLB) and the Oakland Raiders of the National Football League (NFL). It opened in 1966 and is the only remaining stadium in the United States that is shared by professional football and baseball teams.",
     image: require('../images/coliseum1.jpg')
   },
-
+  {
+    name: "Salesforce Transit Center",
+    Bartobj: {name: "Montgomery St.", abbr: "MONT", lat: "37.789405", lng: "-122.401066"},
+    lat: "37.7892",
+    lng: "-122.3968",
+    description: "Salesforce Transit Center is an intermodal transit station in downtown San Francisco. It serves as the primary bus terminal - and future rail terminal - for the San Francisco Bay Area. The 1,430-foot (440 m)-long building is located one block south of Market Street, San Francisco's primary commercial and transportation artery.",
+    image: require('../images/salesforce.jpg')
+  },
+  {
+    name: "San Francisco International Airport",
+    Bartobj: {name: "San Francisco International Airport", abbr: "SFIA", lat: "37.615966", lng: "-122.392409"},
+    lat: "37.7749",
+    lng: "-122.4194",
+    description: "Your first or last taste of San Francisco can happen right here at the wide range of locally based restaurants. The airport is a credentialed museum, so look for intriguing and occasionally offbeat exhibitions throughout the terminals. The Aviation Museum in the International Terminal presents the past of this fascinating facility, while the San Francisco Arts Commission curates a collection of permanent art displayed throughout SFO.",
+    image: require('../images/sfo.jpg')
+  },
+  {
+    name: "Lake Merced Golf Club",
+    Bartobj: {name: "Daly City", abbr: "DALY", lat: "37.706121", lng: "-122.469081"},
+    lat: "37.6959",
+    lng: "-122.4728",
+    description: "Lake Merced Golf Club is an 18-hole private golf club located in Daly City, an adjacent suburb south of San Francisco. Founded 96 years ago in 1922.",
+    image: require('../images/golf.gif')
+  },
+  {
+    name: "Sunnyside Conservatory",
+    Bartobj: {name: "Balboa Park", abbr: "BALB", lat: "37.721585", lng: "-122.447506"},
+    lat: "37.7319",
+    lng: "-122.4408",
+    description: "San Francisco’s Sunnyside Conservatory (236 Monterey Boulevard) is an extraordinary gathering space and botanic jewel, set off by a hundred-year old palm grove and the dramatic foliage of its surrounding gardens. Owned by the San Francisco Recreation and Park Department, the garden is open everyday dawn to dusk, for everyone’s enjoyment.",
+    image: require('../images/conservatory.jpg')
+  }
 ]
 export default attractions;
