@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import { withGoogleMap, GoogleMap , Marker } from 'react-google-maps';
 /*global google*/
 const mapOptions = {
   center: {
@@ -33,12 +33,21 @@ class BartMap extends React.Component {
 
 
     render() {
+
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
             defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
-            defaultZoom = { 11 }
-            markers= {[37.77232,-122,2321321]}
-            >
+            defaultZoom = { 11 }>
+
+            { this.props.markers.map((marker, index)=> {
+        return (
+          <Marker
+            position={marker}
+            title="Click to zoom"
+            onClick={props.onMarkerClick}
+          />
+        )
+      })}
             </ GoogleMap>
         ))
         return (
@@ -46,7 +55,9 @@ class BartMap extends React.Component {
 
                 <GoogleMapExample className='google-map'
                             containerElement={<div className='map' style={{ width: `64%`, height: `87.5%`}}/> }
-                            mapElement={ <div style={{height: `100%`}} />}
+                            mapElement={ <div style={{height: `100%`}}/>}
+
+
                 />
                 <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide
                     people with information on where a certain budget can get you to by Bart.

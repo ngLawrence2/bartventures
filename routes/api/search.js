@@ -1,6 +1,7 @@
 const express = require("express");
 const Request = require('request');
 const axios = require('axios');
+const Attraction = require('../../models/Attraction');
 const router =  express.Router();
 
 
@@ -22,10 +23,10 @@ router.get("/:budget/:loc", (req,res) => {
          lng: data.root.stations.station[i].gtfs_longitude
        };
 
-  console.log(req.params.loc);
+  //console.log(req.params.loc);
        //calculate which distance is shorter
        stations.push(stationObj);
-       console.log(stations);
+    //   console.log(stations);
      }
 
 
@@ -48,7 +49,12 @@ router.get("/:budget/:loc", (req,res) => {
     });
     return Promise.all(promiseArray);
   }).then((responseArray) => {
-    res.json(responseArray);
+    Attraction.find({test: '3213421'}).exec( (err, attr) => {
+      res.json(attr);
+    });
+
+    //res.json(responseArray);
+
   }).catch( err => {
       console.log(err);
     })

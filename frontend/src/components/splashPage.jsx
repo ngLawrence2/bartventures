@@ -16,10 +16,11 @@ class SplashPage extends React.Component {
   }
 
   render() {
+    const markerConst = [{ lat: 37.773972, lng: -122.431297 } ,{ lat: 38.23123, lng: -122.931297 } ];
     return <div>
         <Search getBartStations={this.props.getBartStations} getAllBartStations={this.props.allBarts} loc={this.props.coords} clearErrors={this.props.clearErrors} />
-        <BartMap location={this.props.allBartStations} />
-        <AttractionsContainer />
+        <BartMap location={this.props.allBartStations} markers ={markerConst} />
+        <AttractionsContainer/>
       </div>;
   }
 }
