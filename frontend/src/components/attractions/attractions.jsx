@@ -71,9 +71,9 @@ class Attractions extends React.Component {
                   <img className="all-attraction-photos" src={attractions[4].image}/>
                   <p className="attractions-desc">{attractions[4].description}</p>
                   <br></br><br></br>
-                <p className="attractions-name">{attractions[5].name}</p>
-                  <img className="all-attraction-photos" src={attractions[5].image}/>
-                  <p className="attractions-desc">{attractions[5].description}</p>
+                <p className="attractions-name">{attractions[13].name}</p>
+                  <img className="all-attraction-photos" src={attractions[13].image}/>
+                  <p className="attractions-desc">{attractions[13].description}</p>
 
               <li>Attraction8 Photo and Title here</li>
                 <p className="attractions-desc">Description8 here</p>
