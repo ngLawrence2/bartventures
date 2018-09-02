@@ -1,16 +1,101 @@
+.signup-btn {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px 1px;
+}
+
+.signup-btn:active {
+  background-color: white;
+  box-shadow: 0px 2px 5px 1px;
+  transform: translateY(5px);
+}
+
+.signup-btn:hover {
+  background-color: #87CEEB;
+}
+
+.login-btn {
+  background-color: white;
+  padding: 10px;
+  border-radius: 3px;
+  text-decoration: none;
+  box-shadow: 0px 2px 5px 1px;
+}
+
+.login-btn:active {
+  background-color: white;
+  box-shadow: 0px 2px 5px 1px;
+  transform: translateY(5px);
+}
+
+.login-btn:hover {
+  background-color: #87CEEB;
+}
+
+.nav-bar {
+  width: 100%;
+  position: fixed;
+  background-color: #3C7BFC;
+  height: 12%;
+  z-index: 27;
+  border-bottom: 2px solid black;
+}
+
 div.attractions-body {
-  /* text-align: center; */
   background-color: white;
   margin-left: 50%;
   width: 50%;
+  /* margin-top: 15%; */
   font-size: 40px;
-  color: blue;
+  color: white;
   padding-top: 5%;
   padding-bottom: 5%;
+  max-width: 50%;
+  position: absolute;
+  top: 12%;
+  border: 1px solid black;
+  border-left: 1px solid gray;
+  border-bottom: 1px solid black;
+  z-index: 25;
+}
+
+.attractions-explore {
+  font-style: italic;
+  font-family: Rockwell;
+  font-size: 42px;
 }
 
 .attractions-header {
+  padding-top: 3%;
+  margin-top: -10%;
+  height: 130px;
   text-align: center;
+  /* display: flex; */
+  font-family: Rockwell;
+  font-size: 40px;
+  font-weight: bold;
+  /* color: #FFFACD; */
+  color: ##F5F5F5;
+  background-size: 100%;
+  background-position: center;
+  background-image: url(https://s22.postimg.cc/vw094vlbl/golden_Gate_Bridge_Background.jpg);
+  border-bottom: 2px solid black;
+}
+
+.attractions-name {
+  font-weight: bold;
+}
+
+.attractions-desc {
+  font-style: italic;
+  padding-right: 5%;
+}
+
+.all-attraction-photos {
+  max-width: 50%;
+  border: 1px solid #19ABEB;
 }
 
 ul.test-list {
@@ -52,12 +137,17 @@ span.arrow {
 
 img.bc-logo {
   background-color: aliceblue;
-  padding: 3px 3px 3px 3px;
+  /* padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 1%;
+  padding-right: 1%; */
+  /* padding: 3px 3px 3px 3px; */
   border: 1px black solid;
   opacity: 0.9;
   position: absolute;
-  margin-top: 12px;
-  margin-left: 26px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
   z-index: 40;
   height: 44px;
 }
@@ -66,22 +156,23 @@ div.or {
   cursor: initial;
   margin-left: 10px;
   margin-right: 10px;
+  color: white;
 }
 div.sessionLinks:hover {
   cursor: pointer;
 }
 
 div.sessionLinks{
-  /* position:fixed; */
+  position: relative;
   width: 500px;
-  margin-right: 10px;
-  align-content: space-between;
+  /* margin-right: 10px; */
+  /* align-content: space-between; */
   display: flex;
   text-align: center;
-  z-index: 30;
+  /* z-index: 26; */
   background: none;
   margin-left: 80%;
-  margin-top: -47px;
+  /* margin-top: -10px; */
 }
 span.attractions {
   margin-top: -2px;
@@ -119,14 +210,33 @@ input[type=text].budget {
 }
 
 button.logout-button {
-  position: absolute;
-  margin-top: 10px;
+  margin-left: 25px;
+  /* position: absolute; */
+  margin-top: 15px;
   z-index: 20;
-  height: 20px;
+  height: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 1px;
+  font-weight: bold;
+}
+
+.logout-button:active {
+  background-color: white;
+  box-shadow: 0px 2px 5px 1px;
+  transform: translateY(5px);
+}
+
+.logout-button:hover {
+  background-color: #87CEEB;
 }
 
 div.greeting {
+  margin-top: -5%;
+  margin-left: 85%;
+  display: inline-flex;
   z-index: 22;
+  color: white;
+  /* font-size: 10px; */
 }
 
 div.logan {
@@ -134,7 +244,7 @@ div.logan {
 }
 
 div.map {
-  clear: map;
+  /* clear: map; */
   /* opacity: 0.2; */
   /* position: absolute; */
   bottom: 50px;
@@ -144,7 +254,7 @@ div.map {
   /* height: 100%; */
   /* z-index: 9; */
   position: fixed;
-  top: 74px;
+  top: 12%;
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
@@ -166,6 +276,7 @@ span.disclaimer {
   top: 95.5%;
   min-height: 40px;
   width: 100%;
+  z-index: 30;
 }
 
 div.map-container {
@@ -174,16 +285,29 @@ div.map-container {
 }
 
 h1.current-user {
-  position: fixed;
-  top: 35px;
+  /* position: fixed; */
+  /* top: 35px; */
+  font-size: 20px;
   z-index: 25;
+  font-style: italic;
 }
 
-.nav-bar {
-  width: 100%;
-  position: fixed;
-  /* opacity: 0.5; */
+div.bart-venture {
+  /* display: flex; */
+  /* width: 100px; */
+  /* align-content: space-around; */
+  margin-top: 1%;
+  margin-left: 10%;
+
+  height: 35px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helevetica Neue', sans-serif;
+  color: white;
+  font-size: 50px;
+  /* background-color: #3C7BFC; */
 }
+
+/* navbar here */
+
 
 h1.header {
   /* position: fixed; */
@@ -204,7 +328,7 @@ h1.header {
   margin: 0 0 0 0;
   color:white;
   background-color: #4286f4;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
   span.logan {
     width: auto;
@@ -214,6 +338,7 @@ h1.header {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
   }
+
 
 a:link {
   color: black;
@@ -233,7 +358,7 @@ a:visited {
     text-align: center;
     display: flex; */
     width: 350px;
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     border-radius: 1%;
