@@ -14,7 +14,7 @@ class NavBar extends React.Component {
 
             <Link className="login-btn" to="/login">Log in</Link>
 
-          <div className='or' >Or</div>
+          <div className='or' ></div>
           <Link className="signup-btn" to="/signup">
             Sign Up
           </Link>
