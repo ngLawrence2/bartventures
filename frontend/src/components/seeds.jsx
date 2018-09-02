@@ -46,7 +46,39 @@ const attractions = [
     lng: "-122.4075",
     description: "A shopper's paradise, this bustling square near the theater district has everything from upscale department stores and boutiques to discount houses. After a $25-million facelift in 2002, the cosmopolitan hub boasts a huge amphitheater, granite pedestals on which street entertainers perform and a tree and flower-lined environment in which to enjoy an espresso or an elegant meal.",
     image: require('../images/union_square.jpg')
-  }
+  },
+  {
+    name: "Paramount Theatre",
+    Bartobj: {name: "19th St. Oakland", abbr: "19TH", lat: "37.808350", lng: "-122.268602"},
+    lat: "37.8097",
+    lng: "-122.2682",
+    description: "The Paramount Theatre is a 3,040-seat Art Deco movie theater located at 2025 Broadway in downtown Oakland, California, USA. When it was built in 1931, it was the largest multi-purpose theater on the West Coast, seating 3476. Today, the Paramount is the home of the Oakland East Bay Symphony and the Oakland Ballet, it regularly plays host to R&B, jazz, blues, pop, rock, gospel, classical music, as well as ballets, plays, stand-up comedy, lecture series, special events, and screenings of classic movies from Hollywood's Golden Era.",
+    image: require('../images/paramount.jpg')
+  },
+  {
+    name: "Balmy Alley Murals",
+    Bartobj: {name: "24th St. Mission", abbr: "24TH", lat: "37.752470", lng: "-122.418143"},
+    lat: "37.7518",
+    lng: "-122.4124",
+    description: "Balmy Alley is a one-block-long alley that is home to the most concentrated collection of murals in the city of San Francisco. It is located in the south central portion of the Inner Mission District between 24th Street and Garfield Square. Since 1973, most buildings on the street have been decorated with a mural.",
+    image: require('../images/balmy_alley.jpg')
+  },
+  {
+    name: "City Hall",
+    Bartobj: {name: "Civic Center/UN Plaza", abbr: "CIVC", lat: "37.779732", lng: "-122.414123"},
+    lat: "37.7793",
+    lng: "-122.4193",
+    description: "San Francisco City Hall is the seat of government for the City and County of San Francisco, California. Re-opened in 1915 in its open space area in the city's Civic Center, it is a Beaux-Arts monument to the City Beautiful movement that epitomized the high-minded American Renaissance of the 1880s to 1917.",
+    image: require('../images/City_Hall.jpg')
+  },
+  {
+    name: "Coliseum",
+    Bartobj: {name: "Coliseum", abbr: "COLS", lat: "37.753661", lng: "-122.196869"},
+    lat: "37.7516",
+    lng: "-122.2005",
+    description: "The Oakland Coliseum is a multi-purpose stadium in Oakland, which is home to both the Oakland Athletics of Major League Baseball (MLB) and the Oakland Raiders of the National Football League (NFL). It opened in 1966 and is the only remaining stadium in the United States that is shared by professional football and baseball teams.",
+    image: require('../images/coliseum1.jpg')
+  },
 
 ]
 export default attractions;
