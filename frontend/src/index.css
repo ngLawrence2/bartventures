@@ -29,6 +29,21 @@ div.attractions-body {
 
 .attractions-header {
   text-align: center;
+  font-size: 48px;
+  background-color: lightblue;
+}
+
+.attractions-name {
+  font-weight: bold;
+}
+
+.attractions-desc {
+
+}
+
+.all-attraction-photos {
+  max-width: 50%;
+  border: 1px solid blue;
 }
 
 ul.test-list {
