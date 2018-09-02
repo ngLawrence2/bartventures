@@ -18,11 +18,15 @@ const AttractionSchema = new Schema({
     type:String,
     required:true
   },
-  BartObj: {
+  Bartobj: {
     name: String,
-    
-  }
-
+    abbr: String,
+    lat: Number,
+    lng: Number
+  },
+  image: String
 });
 
-module.exports = Attractions = mongoose.model('attractions', AttractionSchema);
+
+
+module.exports = Attractions = mongoose.model('Attractions', AttractionSchema);
