@@ -8,10 +8,17 @@ const bodyParser = require('body-parser');
 const passport = require('passport');
 const seeder = require('mongoose-seed');
 const search = require("./routes/api/search");
-
+const path = require('path');
 
 require('./config/passport')(passport);
 
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('frontend/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  })
+}
 
 mongoose
     .connect(db, {useNewUrlParser: true })
