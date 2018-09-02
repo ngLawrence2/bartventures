@@ -38,7 +38,7 @@ router.get("/:budget/:loc", (req,res) => {
           let farePriceToDest = fareResponse.data.root.trip.fare;
           let priceDiff = farePriceToDest - req.params.budget;
           if (priceDiff <= 0) {
-            return station;
+            return station.name;
           }else {
             return null;
           }
@@ -46,11 +46,11 @@ router.get("/:budget/:loc", (req,res) => {
     });
     return Promise.all(promiseArray);
   }).then((responseArray) => {
-    Attraction.find({test: '3213421'}).exec( (err, attr) => {
+    const resultArray = responseArray.filter(obj => obj!==null);
+    Attraction.find({ 'Bartobj.name': {$in : resultArray}}).exec( (err, attr) => {
       res.json(attr);
     });
-
-    //res.json(responseArray);
+    // res.json(resultArray);
 
   }).catch( err => {
       console.log(err);

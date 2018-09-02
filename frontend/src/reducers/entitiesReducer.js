@@ -1,10 +1,10 @@
 import {combineReducers} from 'redux';
-import SearchReducer from './search_reducer.js';
 import BartStationsReducer from './BartStationsReducer.js';
+import AttractionReducer from './AttractionReducer.js';
 
 const entitiesReducer = combineReducers({
-  search: SearchReducer,
-  allBart: BartStationsReducer
+  bart: BartStationsReducer,
+  attraction: AttractionReducer
 });
 
 export default entitiesReducer;

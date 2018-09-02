@@ -4,15 +4,13 @@ import {getBartStations} from '../util/map_util.js';
 import {clearError} from '../util/session_api_util.js';
 
 const mapStateToProps = state => {
-
   return {
-    allBartStations: state.entities.search,
-    allBarts: state.entities.allBart
+    bart: state.entities.bart,
+    attractions: state.entities.attraction
   };
 };
 
 const mapDispatchToProps = dispatch => {
-
   return {
     getBartStations: (budget, loc) => dispatch(getBartStations(budget, loc)),
     clearErrors :() => dispatch(clearError())
