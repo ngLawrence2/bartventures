@@ -154,7 +154,7 @@ class Search extends React.Component {
        $
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
         {bartSelector}
-
+        
          <button className="search-btn" onClick={this.handleSubmit}>Show me places to go!</button>
        </form>
 
