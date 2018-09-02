@@ -13,30 +13,31 @@ class Attractions extends React.Component {
     return (
       <div className="attractions-body">
           <div className="attractions-header">
-          Places to Explore
+          Places to <div className="attractions-explore"> Explore</div>
           </div>
           <div>
             <ul className="test-list">
+              <br></br><br></br>
                 <p className="attractions-name">{attractions[0].name}</p>
                   <img className="all-attraction-photos" src={attractions[0].image}/>
                   <p className="attractions-desc">{attractions[0].description}</p>
-                  <br></br>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[1].name}</p>
                   <img className="all-attraction-photos" src={attractions[1].image}/>
                   <p className="attractions-desc">{attractions[1].description}</p>
-                  <br></br>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[2].name}</p>
                   <img className="all-attraction-photos" src={attractions[2].image}/>
                   <p className="attractions-desc">{attractions[2].description}</p>
-                  <br></br>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[3].name}</p>
                   <img className="all-attraction-photos" src={attractions[3].image}/>
                   <p className="attractions-desc">{attractions[3].description}</p>
-                  <br></br>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[4].name}</p>
                   <img className="all-attraction-photos" src={attractions[4].image}/>
                   <p className="attractions-desc">{attractions[4].description}</p>
-                  <br></br>
+                  <br></br><br></br>
                 <p className="attractions-name">{attractions[5].name}</p>
                   <img className="all-attraction-photos" src={attractions[5].image}/>
                   <p className="attractions-desc">{attractions[5].description}</p>
