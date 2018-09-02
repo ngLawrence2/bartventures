@@ -39,15 +39,30 @@ class BartMap extends React.Component {
             defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
             defaultZoom = { 11 }>
 
-            { this.props.markers.map((marker, index)=> {
+            { this.props.bartMarkers.map((bart, index)=> {
+              let loc = { lat: bart.lat, lng: bart.lng};
         return (
           <Marker
-            position={marker}
-            title="Click to zoom"
+            options= {{icon: 'http://maps.google.com/mapfiles/marker_green.png'}}
+            position={loc}
+            title= {bart.name}
             onClick={props.onMarkerClick}
           />
         )
       })}
+
+
+      { this.props.attractionMarkers.map((attr, index)=> {
+        let loc = {lat: attr.lat, lng: attr.lng};
+        return (
+          <Marker
+            position={loc}
+            title= {attr.name}
+            onClick={props.onMarkerClick}
+          />
+        )
+      })}
+
             </ GoogleMap>
         ))
 
