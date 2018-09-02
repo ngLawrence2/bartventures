@@ -39,7 +39,7 @@
   position: fixed;
   background-color: #0036db;
   font-family: sans-serif;
-  height: 12%;
+  height: 100px;
   z-index: 27;
   border-bottom: 2px solid black;
 }
@@ -51,7 +51,7 @@ div.attractions-body {
   /* margin-top: 15%; */
   font-size: 40px;
   color: white;
-  padding-top: 5%;
+  /* padding-top: 5%; */
   padding-bottom: 5%;
   max-width: 50%;
   position: absolute;
@@ -70,7 +70,7 @@ div.attractions-body {
 
 .attractions-header {
   padding-top: 3%;
-  margin-top: -10%;
+  /* margin-top: 100px; */
   height: 130px;
   text-align: center;
   /* display: flex; */
