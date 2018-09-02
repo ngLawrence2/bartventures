@@ -1,6 +1,7 @@
 const express = require("express");
 const Request = require('request');
 const axios = require('axios');
+const Attraction = require('../../models/Attraction');
 const router =  express.Router();
 
 
@@ -22,10 +23,10 @@ router.get("/:budget/:loc", (req,res) => {
          lng: data.root.stations.station[i].gtfs_longitude
        };
 
-  console.log(req.params.loc);
+  //console.log(req.params.loc);
        //calculate which distance is shorter
        stations.push(stationObj);
-       console.log(stations);
+    //   console.log(stations);
      }
 
 
@@ -38,17 +39,20 @@ router.get("/:budget/:loc", (req,res) => {
           let farePriceToDest = fareResponse.data.root.trip.fare;
           let priceDiff = farePriceToDest - req.params.budget;
           if (priceDiff <= 0) {
-            return station;
+            return station.name;
           }else {
-            let tooExpensiveObj = station;
-            tooExpensiveObj.tooExpensive= true;
-            return tooExpensiveObj;
+            return null;
           }
       }));
     });
     return Promise.all(promiseArray);
   }).then((responseArray) => {
-    res.json(responseArray);
+    const resultArray = responseArray.filter(obj => obj!==null);
+    Attraction.find({ 'Bartobj.name': {$in : resultArray}}).exec( (err, attr) => {
+      res.json(attr);
+    });
+    // res.json(resultArray);
+
   }).catch( err => {
       console.log(err);
     })
