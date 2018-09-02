@@ -7,6 +7,7 @@ const events = require('./routes/api/events');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const seeder = require('mongoose-seed');
+const search = require("./routes/api/search");
 
 
 require('./config/passport')(passport);
@@ -18,24 +19,24 @@ mongoose
     .catch( err => console.log(err));
 
 
-    seeder.connect(db, function() {
-
-      // Load Mongoose models
-      seeder.loadModels([
-        'models/Attraction.js',
-
-      ]);
-
-      // Clear specified collections
-      seeder.clearModels(['Attractions'], function() {
-
-        // Callback to populate DB once collections have been cleared
-        seeder.populateModels(data, function() {
-          seeder.disconnect();
-        });
-
-      });
-    });
+    // seeder.connect(db, function() {
+    //
+    //   // Load Mongoose models
+    //   seeder.loadModels([
+    //     'models/Attraction.js',
+    //
+    //   ]);
+    //
+    //   // Clear specified collections
+    //   seeder.clearModels(['Attractions'], function() {
+    //
+    //     // Callback to populate DB once collections have been cleared
+    //     seeder.populateModels(data, function() {
+    //       seeder.disconnect();
+    //     });
+    //
+    //   });
+    // });
 
     // Data array containing seed data - documents organized by Model
     var data = [
@@ -52,7 +53,7 @@ mongoose
                 },
                 {
                   'name': "Dolores Park",
-                  'Bartobj': {name: "16th St. Mission", abbr: "16TH", lat: "37.765062", lng: "-122.419694"},
+                  'Bartobj': {name: "Downtown Berkeley", abbr: "DBRK", lat: "37.870104", lng: "-122.268133"},
                   'lat': "37.7596",
                   'lng': "-122.4269",
                   'description': "Mission Dolores Park, often abbreviated to Dolores Park, is a Leave No Trace city park in San Francisco, California. Dolores Park offers several features including many tennis courts, a basketball court, a multi-purpose court, a soccer field, a pissoir, a children's playground, and a dog play area. The southern half of the park is also notable for its views of the Mission district, downtown, the San Francisco Bay and the East Bay.",
@@ -167,4 +168,5 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/api/users", users);
 app.use("/api/events", events);
+app.use("/api/search", search);
 app.use(passport.initialize());
