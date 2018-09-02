@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
+=======
+>>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
 .signup-btn {
   background-color: white;
   padding: 10px;
@@ -46,7 +49,6 @@
   z-index: 27;
   border-bottom: 2px solid black;
 }
->>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
 
 div.attractions-body {
   background-color: white;
@@ -54,13 +56,11 @@ div.attractions-body {
   width: 50%;
   /* margin-top: 15%; */
   font-size: 40px;
-<<<<<<< HEAD
+
   color: blue;
   padding-top: 7%;
-=======
   color: white;
   padding-top: 5%;
->>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
   padding-bottom: 5%;
   max-width: 50%;
   position: absolute;
@@ -154,16 +154,13 @@ img.bc-logo {
   /* padding: 3px 3px 3px 3px; */
   border: 1px black solid;
   opacity: 0.9;
-<<<<<<< HEAD
   position: fixed;
   margin-top: 12px;
   margin-left: 26px;
-=======
   position: absolute;
   margin-top: 2%;
   margin-bottom: 2%;
   margin-left: 2%;
->>>>>>> f476965d0bfa6f0c2992b159c7bb18c82007e930
   z-index: 40;
   height: 44px;
 }
@@ -180,6 +177,7 @@ div.sessionLinks:hover {
 
 div.sessionLinks{
   position:fixed;
+  /* position: relative; */
   width: 500px;
   /* margin-right: 10px; */
   /* align-content: space-between; */
@@ -326,10 +324,6 @@ div.bart-venture {
 /* navbar here */
 
 
-h1.header {
-  /* position: fixed; */
-}
-
 div.header {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
@@ -344,7 +338,7 @@ div.header {
   /* text-align: center; */
   padding-left: 100px;
   padding-top: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   margin: 0 0 0 0;
   color:white;
   background-color: #4286f4;
