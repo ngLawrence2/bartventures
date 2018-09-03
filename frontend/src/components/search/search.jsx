@@ -1,33 +1,6 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
 /*global google*/
-//
-// const currgeocoder = new google.maps.Geocoder();
-//
-// function initializeCurrent(latcurr, longcurr) {
-//
-//   console.log(latcurr + "-- ######## --" + longcurr);
-//
-//   if (latcurr != '' && longcurr != '') {
-//     var myLatlng = new google.maps.LatLng(latcurr, longcurr);
-//     return getCurrentAddress(myLatlng);
-//   }
-// }
-//
-// function getCurrentAddress(location) {
-//   currgeocoder.geocode({
-//     'location': location
-//
-//   }, function(results, status) {
-//
-//     if (status == google.maps.GeocoderStatus.OK) {
-//       console.log(results[0]);
-//       $("#address").html(results[0].formatted_address);
-//     } else {
-//       alert('Geocode was not successful for the following reason: ' + status);
-//     }
-//   });
-// }
 
 
 class Search extends React.Component {
