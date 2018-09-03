@@ -2,6 +2,7 @@ import React from 'react';
 import BartMap from '../map/map.jsx';
 import attractions from '../seeds.jsx';
 
+//comment
 
 class Attractions extends React.Component {
   constructor(props) {
