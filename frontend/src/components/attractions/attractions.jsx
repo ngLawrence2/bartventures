@@ -12,7 +12,7 @@ class Attractions extends React.Component {
   render() {
     const displayAttractions = this.props.attractions.map( (attr,idx) => {
       return (
-        <div key = {idx}>
+        <div key = {idx} className="displayAttractions">
           <p className="attractions-name">{attr.name}</p>
             <img className="all-attraction-photos" src={ attr.image } />
             <p className="attractions-desc">{attr.description}</p>

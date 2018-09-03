@@ -51,7 +51,6 @@ div.attractions-body {
   width: 50%;
   /* margin-top: 15%; */
   font-size: 40px;
-
   color: blue;
   padding-top: 0;
   color: white;
@@ -105,7 +104,9 @@ div.attractions-body {
 ul.test-list {
   font-size: 20px;
   color: black;
+
 }
+
 
 p.attractions-desc {
   font-size: 16px;
@@ -194,6 +195,7 @@ div.sessionLinks{
   margin-left: 80%;
   margin-top: 30px;
 }
+
 span.attractions {
   margin-top: -2px;
   font-size: 18px;
@@ -421,18 +423,18 @@ a:visited {
 
  body{
     width: 100%;
-  
+
     overflow-x: hidden;
 }
 
 .spinner{
     width: 80px;
     height: 80px;
-    
+
     border: 2px solid #f3f3f3;
     border-top:3px solid black;
     border-radius: 100%;
-    
+
     position: fixed;
     top:0;
     bottom:0;
