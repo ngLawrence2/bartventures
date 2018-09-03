@@ -1,4 +1,6 @@
 module.exports = {
-    mongoURI: 'mongodb://bartventure:password1@ds131942.mlab.com:31942/bartventure',
-    secretOrKey: 'secret'
+    mongoURI:
+        "mongodb://jingxia1219:jinjin1219@ds133262.mlab.com:33262/bart-guide-for-tourists",
+    //Make sure this is your own unique string
+    secretOrKey: "secret"
 };

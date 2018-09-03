@@ -53,13 +53,13 @@ div.attractions-body {
   font-size: 40px;
 
   color: blue;
-  padding-top: 7%;
+  padding-top: 0;
   color: white;
   /* padding-top: 5%; */
   padding-bottom: 5%;
   max-width: 50%;
   position: absolute;
-  top: 12%;
+  top: 89px;
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
@@ -84,7 +84,7 @@ div.attractions-body {
   color: ##F5F5F5;
   background-size: 100%;
   background-position: center;
-  background-image: url(https://s22.postimg.cc/vw094vlbl/golden_Gate_Bridge_Background.jpg);
+  background-image: url( https://s22.postimg.cc/vw094vlbl/golden_Gate_Bridge_Background.jpg);
   border-bottom: 2px solid black;
 }
 
@@ -270,7 +270,7 @@ div.map {
   /* height: 100%; */
   /* z-index: 9; */
   position: fixed;
-  top: 12%;
+  top: 89px;
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
@@ -293,6 +293,10 @@ span.disclaimer {
   min-height: 40px;
   width: 100%;
   z-index: 30;
+}
+
+div.nav-bar {
+  height: 89px
 }
 
 div.map-container {
