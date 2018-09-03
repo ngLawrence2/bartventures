@@ -46,7 +46,7 @@
 }
 
 div.attractions-body {
-  background-color: white;
+  background-color: #effaff;
   margin-left: 50%;
   width: 50%;
   /* margin-top: 15%; */
@@ -99,7 +99,7 @@ div.attractions-body {
 
 .all-attraction-photos {
   max-width: 50%;
-  border: 1px solid #19ABEB;
+  border: 1px solid gray;
 }
 
 ul.test-list {
@@ -118,8 +118,15 @@ p.attractions-desc {
 }
 
 .search-btn {
-background: lightgreen;
-border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  color: white;
+  width: 110px;
+background: black;
+border-radius: 0;
+font-weight: bold;
+border: none;
 }
 
 .search-btn:hover {
@@ -203,7 +210,7 @@ form.budget {
   max-width: 100px;
   z-index: 32;
   margin-left: 1.5%;
-  margin-top: 20%;
+  margin-top: 140px;
   height: 25px;
   margin-right: 5px;
 }
@@ -268,7 +275,7 @@ div.map {
   /* margin-left: 5px; */
   max-width: 50%;
   /* height: 100%; */
-  /* z-index: 9; */
+  z-index: 9;
   position: fixed;
   top: 89px;
   border: 1px solid black;
@@ -409,4 +416,46 @@ a:visited {
    /* padding-top: 8px; */
    color: white;
    background-color: #4286f4;
+ }
+
+
+ body{
+    width: 100%;
+  
+    overflow-x: hidden;
+}
+
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid black;
+    border-radius: 100%;
+    
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background:white;
+  position:fixed;
+  left:0;
+  top:0;
  }

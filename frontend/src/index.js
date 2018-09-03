@@ -11,6 +11,7 @@ import App from './App.js';
 import registerServiceWorker from './registerServiceWorker';
 import Root from './root.jsx';
 
+
 document.addEventListener('DOMContentLoaded', () => {
   let store = configureStore();
   // Check for token
