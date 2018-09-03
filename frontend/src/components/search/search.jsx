@@ -120,26 +120,6 @@ class Search extends React.Component {
         );
   }
 
-  getDistance(stationA, stationB ) {
-    let distance = Math.pow(stationA.lat - stationB.lat,2) + Math.pow(stationA.lng - stationB.lng, 2);
-    return Math.pow(distance, 0.5);
-  }
-
-  closestStation() {
-    let closest = "16th St. Mission";
-    if(this.props.coords) {
-    let currentLocation = { lat: this.props.coords.latitude, lng: this.props.coords.longitude};
-    let distance = Math.pow(37.765062 - this.props.coords.latitude, 2) + Math.pow(-122.419694 - this.props.coords.longitude,2);
-    this.getAllBartStations.forEach( bart => {
-      if ( this.getDistance(bart, currentLocation) < distance ) {
-        console.log(closest);
-        closest = bart.name;
-      }
-    }
-  )
-  }
-  this.setState({value: closest});
-}
 
 
 
@@ -154,7 +134,7 @@ class Search extends React.Component {
        $
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
         {bartSelector}
-        
+
          <button className="search-btn" onClick={this.handleSubmit}>Show me places to go!</button>
        </form>
 
