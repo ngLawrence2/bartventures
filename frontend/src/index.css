@@ -1,3 +1,4 @@
+
 .signup-btn {
   background-color: white;
   padding: 10px;
@@ -45,21 +46,23 @@
 }
 
 div.attractions-body {
-  background-color: white;
+  background-color: #effaff;
   margin-left: 50%;
   width: 50%;
   /* margin-top: 15%; */
   font-size: 40px;
+
+  color: blue;
+  padding-top: 0;
   color: white;
   /* padding-top: 5%; */
   padding-bottom: 5%;
   max-width: 50%;
   position: absolute;
-  top: 12%;
+  top: 89px;
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
-  z-index: 25;
 }
 
 .attractions-explore {
@@ -81,7 +84,7 @@ div.attractions-body {
   color: ##F5F5F5;
   background-size: 100%;
   background-position: center;
-  background-image: url(https://s22.postimg.cc/vw094vlbl/golden_Gate_Bridge_Background.jpg);
+  background-image: url( https://s22.postimg.cc/vw094vlbl/golden_Gate_Bridge_Background.jpg);
   border-bottom: 2px solid black;
 }
 
@@ -96,7 +99,7 @@ div.attractions-body {
 
 .all-attraction-photos {
   max-width: 50%;
-  border: 1px solid #19ABEB;
+  border: 1px solid gray;
 }
 
 ul.test-list {
@@ -115,8 +118,15 @@ p.attractions-desc {
 }
 
 .search-btn {
-background: lightgreen;
-border-radius: 5px;
+  padding-top: 2px;
+  padding-bottom: 4px;
+  margin-top: 4px;
+  color: white;
+  width: 110px;
+background: black;
+border-radius: 0;
+font-weight: bold;
+border: none;
 }
 
 .search-btn:hover {
@@ -150,10 +160,13 @@ img.bc-logo {
   /* padding: 3px 3px 3px 3px; */
   border: 1px black solid;
   opacity: 0.9;
+  position: fixed;
+  margin-top: 12px;
+  margin-left: 26px;
   position: absolute;
-  margin-top: 2%;
+  margin-top: 21px;
   margin-bottom: 2%;
-  margin-left: 2%;
+  margin-left: 18px;
   z-index: 40;
   height: 44px;
 }
@@ -169,16 +182,17 @@ div.sessionLinks:hover {
 }
 
 div.sessionLinks{
-  position: relative;
+  position:fixed;
+  /* position: relative; */
   width: 500px;
   /* margin-right: 10px; */
   /* align-content: space-between; */
   display: flex;
   text-align: center;
-  /* z-index: 26; */
+  z-index: 26;
   background: none;
   margin-left: 80%;
-  /* margin-top: -10px; */
+  margin-top: 30px;
 }
 span.attractions {
   margin-top: -2px;
@@ -196,7 +210,7 @@ form.budget {
   max-width: 100px;
   z-index: 32;
   margin-left: 1.5%;
-  margin-top: 20%;
+  margin-top: 140px;
   height: 25px;
   margin-right: 5px;
 }
@@ -211,7 +225,7 @@ div.current-coords {
 }
 
 input[type=text].budget {
-  margin-top: 3px;
+  margin-top: 23px;
   max-width: 130px;
 }
 
@@ -261,9 +275,9 @@ div.map {
   /* margin-left: 5px; */
   max-width: 50%;
   /* height: 100%; */
-  /* z-index: 9; */
+  z-index: 9;
   position: fixed;
-  top: 12%;
+  top: 89px;
   border: 1px solid black;
   border-left: 1px solid gray;
   border-bottom: 1px solid black;
@@ -288,6 +302,10 @@ span.disclaimer {
   z-index: 30;
 }
 
+div.nav-bar {
+  height: 89px
+}
+
 div.map-container {
   display: flex;
   background-color: white;
@@ -302,31 +320,25 @@ h1.current-user {
 }
 
 div.bart-venture {
-  /* display: flex; */
-  /* width: 100px; */
-  /* align-content: space-around; */
-  margin-top: 1%;
-  margin-left: 10%;
-
-  height: 35px;
+  margin-top: 0;
+  /* margin-left: 10px; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helevetica Neue', sans-serif;
   color: white;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 300;
-  /* background-color: #3C7BFC; */
+  width: 250px;
 }
 
 /* navbar here */
 
 
-h1.header {
-  /* position: fixed; */
+div.header {
   border-left: 1px solid gray;
   border-right: 1px solid gray;
   display: flex;
-  /* opacity: 0.98; */
+  /* opacity: 0.8; */
   border-bottom: 4px solid black;
-   /* position: fixed; */
+   position: fixed;
    top: 0;
    z-index: 10;
   height: 35px;
@@ -334,7 +346,7 @@ h1.header {
   /* text-align: center; */
   padding-left: 100px;
   padding-top: 20px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
   margin: 0 0 0 0;
   color:white;
   background-color: #4286f4;
@@ -404,4 +416,46 @@ a:visited {
    /* padding-top: 8px; */
    color: white;
    background-color: #4286f4;
+ }
+
+
+ body{
+    width: 100%;
+  
+    overflow-x: hidden;
+}
+
+.spinner{
+    width: 80px;
+    height: 80px;
+    
+    border: 2px solid #f3f3f3;
+    border-top:3px solid black;
+    border-radius: 100%;
+    
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    z-index: 100;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background:white;
+  position:fixed;
+  left:0;
+  top:0;
  }
