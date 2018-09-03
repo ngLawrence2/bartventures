@@ -41,7 +41,6 @@ class Search extends React.Component {
     this.handleSubmit=this.handleSubmit.bind(this);
     this.displayBartSelectorForm=this.displayBartSelectorForm.bind(this);
     this.handleChange=this.handleChange.bind(this);
-    this.closestStation = this.closestStation.bind(this);
   }
 
   handleChange(e) {
