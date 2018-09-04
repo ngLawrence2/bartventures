@@ -3,17 +3,15 @@ const Request = require('request');
 const axios = require('axios');
 const Attraction = require('../../models/Attraction');
 const router =  express.Router();
-const winston = require('winston');
-
-
+const logger = require('heroku-logger');
 
 router.get("/:budget/:loc", (req,res) => {
-  winston.log("consodsajodsa0dsa");
+  logger.info("consodsajodsa0dsa");
   //create a variable
   let currentStation;
   //create loc into a bart station
   let stations = [];
-  winston.log(req.params.loc);
+  logger.info(req.params.loc);
   axios.get("https://api.bart.gov/api/stn.aspx?cmd=stns&key=QMBS-5LIW-9J2T-DWE9&json=y").then((response) => {
      let keys = Object.keys(response);
      let data = response.data;
@@ -25,10 +23,10 @@ router.get("/:budget/:loc", (req,res) => {
          lng: data.root.stations.station[i].gtfs_longitude
        };
 
-  //winston.log(req.params.loc);
+  //logger.info(req.params.loc);
        //calculate which distance is shorter
        stations.push(stationObj);
-    //   winston.log(stations);
+    //   logger.info(stations);
      }
 
 
@@ -51,13 +49,13 @@ router.get("/:budget/:loc", (req,res) => {
   }).then((responseArray) => {
     const resultArray = responseArray.filter(obj => obj!==null);
     Attraction.find({ 'Bartobj.name': {$in : resultArray}}).exec( (err, attr) => {
-      winston.log(attr);
+      logger.info(attr);
       res.json(attr);
     });
     // res.json(resultArray);
 
   }).catch( err => {
-      winston.log(err);
+      logger.info(err);
     })
 
 });
