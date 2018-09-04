@@ -5,6 +5,7 @@ const Attraction = require('../../models/Attraction');
 const router =  express.Router();
 const logger = require('heroku-logger');
 
+
 router.get("/:budget/:loc", (req,res) => {
   logger.info("consodsajodsa0dsa");
   //create a variable
