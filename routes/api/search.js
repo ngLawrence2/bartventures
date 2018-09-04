@@ -6,6 +6,7 @@ const router =  express.Router();
 
 
 router.get("/:budget/:loc", (req,res) => {
+  console.log("consodsajodsa0dsa");
   //create a variable
   let currentStation;
   //create loc into a bart station
