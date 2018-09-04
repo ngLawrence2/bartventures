@@ -48,6 +48,7 @@ router.get("/:budget/:loc", (req,res) => {
   }).then((responseArray) => {
     const resultArray = responseArray.filter(obj => obj!==null);
     Attraction.find({ 'Bartobj.name': {$in : resultArray}}).exec( (err, attr) => {
+      console.log(attr);
       res.json(attr);
     });
     // res.json(resultArray);
