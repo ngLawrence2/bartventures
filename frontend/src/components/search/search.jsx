@@ -1,5 +1,4 @@
 import React from 'react';
-import {geolocated} from 'react-geolocated';
 /*global google*/
 
 
@@ -112,34 +111,13 @@ class Search extends React.Component {
 
       </div>
     );
-
-    // return !this.props.isGeolocationAvailable
-    //   ? <div>Your browser does not support Geolocation</div>
-    //   : !this.props.isGeolocationEnabled
-    //     ? <div>Geolocation is not enabled</div>
-    //     : this.props.coords
-    //       ?
-    //       <div >
-    //         <div className="current-coords"> {this.props.coords.latitude}
-    //           {this.props.coords.longitude}
-    //         </div>
-    //                 <form className='budget'>
-    //                 $
-    //                   <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
-    //                   <input className='current-location' type = "text" onChange={this.update("location")} value={this.state.location} placeholder="Enter your address" />
-    //                   <button className="search-btn" onClick={this.handleSubmit}>Show me routes!</button>
-    //                 </form>
-    //
-    //               </div>
-    //
-    //       : <div>Getting the location data&hellip; </div>;
     }
 }
-
-export default geolocated({
-  positionOptions: {
-    enableHighAccuracy: false,
-  },
-  userDecisionTimeout: 5000,
-})(Search);
-// export default Search;
+//
+// export default geolocated({
+//   positionOptions: {
+//     enableHighAccuracy: false,
+//   },
+//   userDecisionTimeout: 5000,
+// })(Search);
+export default Search;

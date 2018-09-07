@@ -10,7 +10,8 @@ router.get("/:budget/:loc", (req,res) => {
   logger.info("consodsajodsa0dsa");
   //create a variable
   let currentStation;
-  //create loc into a bart station
+
+  //calls a request for all the bart stations
   let stations = [];
   logger.info(req.params.loc);
   axios.get("https://api.bart.gov/api/stn.aspx?cmd=stns&key=QMBS-5LIW-9J2T-DWE9&json=y").then((response) => {
@@ -23,18 +24,15 @@ router.get("/:budget/:loc", (req,res) => {
          lat: data.root.stations.station[i].gtfs_latitude,
          lng: data.root.stations.station[i].gtfs_longitude
        };
-
-  //logger.info(req.params.loc);
-       //calculate which distance is shorter
        stations.push(stationObj);
-    //   logger.info(stations);
      }
 
 
+     //call api for each bart station and
+     //filters the ones with fare higher than budget
+
     let promiseArray = [];
     stations.forEach(station => {
-      //do not use params loc
-
       let fareAPIUrl = "http://api.bart.gov/api/sched.aspx?cmd=fare&orig=" + req.params.loc +"&dest=" + station.abbr + "&date=today&key=QMBS-5LIW-9J2T-DWE9&json=y";
       promiseArray.push(axios.get(fareAPIUrl).then((fareResponse) => {
           let farePriceToDest = fareResponse.data.root.trip.fare;
@@ -49,11 +47,13 @@ router.get("/:budget/:loc", (req,res) => {
     return Promise.all(promiseArray);
   }).then((responseArray) => {
     const resultArray = responseArray.filter(obj => obj!==null);
+
+    //filters attractions depending on bart stations that pass budget filter
+
     Attraction.find({ 'Bartobj.name': {$in : resultArray}}).exec( (err, attr) => {
       logger.info(attr);
       res.json(attr);
     });
-    // res.json(resultArray);
 
   }).catch( err => {
       logger.info(err);
