@@ -21,12 +21,6 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
-
-    if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
-      this.props.getBartStations(100,this.state.value);
-      return;
-    }
     this.props.getBartStations(this.state.budget, this.state.value);
   }
 
@@ -98,9 +92,7 @@ class Search extends React.Component {
 
     const bartSelector = this.displayBartSelectorForm();
     return (
-
       <div>
-
         <form className='budget'>
        $
          <input className='budget'  type = "text" onChange={this.update("budget")} value={this.state.budget} placeholder="Enter your budget" />
