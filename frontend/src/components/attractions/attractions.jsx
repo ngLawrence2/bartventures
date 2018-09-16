@@ -9,6 +9,10 @@ class Attractions extends React.Component {
     super(props);
   }
 
+  getAttraction(loc) {
+    let result = this.props.attractions[0];
+    
+  }
 
   render() {
     const displayAttractions = this.props.attractions.map( (attr,idx) => {

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 export const RECEIVE_ATTRACTIONS="RECEIVE_ATTRACTIONS";
 export const RECEIVE_BUDGET_BART_STATIONS="RECEIVE_BUDGET_BART_STATIONS";
-
+export const DISPLAY_CLICKED_ATTRACTION = "DISPLAY_CLICKED_ATTRACTION";
 export const GET_ERRORS = 'GET_ERRORS';
 
 
@@ -42,7 +42,6 @@ export const receiveAttractions = attractions => {
       }
       resultAttractions.push(attractionObj);
   }
-
   return {
     type: RECEIVE_ATTRACTIONS,
     attractions: resultAttractions
@@ -62,4 +61,16 @@ export const receiveBudgetBartStations = bartStations => {
     type: RECEIVE_BUDGET_BART_STATIONS,
     bartStations: resultBartStations
   }
+}
+
+
+export const receiveMarkerAttraction = loc => {
+  return {
+    type: DISPLAY_CLICKED_ATTRACTION,
+    loc
+  }
+}
+
+export const fetchMarkerAttraction = loc => dispatch => {
+  dispatch(receiveMarkerAttraction(loc));
 }

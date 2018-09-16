@@ -21,15 +21,11 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    let currentLoc = this.props.coords.latitude + " " + this.props.coords.longitude;
-
-    if(this.state.budget === '' || isNaN(parseInt(this.state.budget))) {
-      this.props.getBartStations(100,this.state.value);
+    if(this.state.budget === '' || isNaN(parseInt(this.state.budget)) || this.state.value==='start') {
       return;
     }
     this.props.getBartStations(this.state.budget, this.state.value);
   }
-
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
@@ -93,7 +89,6 @@ class Search extends React.Component {
 
 
 
-
   render() {
 
     const bartSelector = this.displayBartSelectorForm();
@@ -113,11 +108,5 @@ class Search extends React.Component {
     );
     }
 }
-//
-// export default geolocated({
-//   positionOptions: {
-//     enableHighAccuracy: false,
-//   },
-//   userDecisionTimeout: 5000,
-// })(Search);
+
 export default Search;
