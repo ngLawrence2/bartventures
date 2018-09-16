@@ -1,6 +1,6 @@
 import {connect} from 'react-redux';
 import SplashPage from './splashPage.jsx';
-import {getBartStations,fetchMarkerAttraction} from '../util/map_util.js';
+import {getBartStations,fetchMarkerAttraction,deleteDisplay} from '../util/map_util.js';
 import {clearError} from '../util/session_api_util.js';
 
 
@@ -16,7 +16,8 @@ const mapDispatchToProps = dispatch => {
   return {
     getBartStations: (budget, loc) => dispatch(getBartStations(budget, loc)),
     clearErrors :() => dispatch(clearError()),
-    fetchMarkerAttraction: (loc) => dispatch(fetchMarkerAttraction(loc))
+    fetchMarkerAttraction: (loc) => dispatch(fetchMarkerAttraction(loc)),
+    deleteDisplay: () => dispatch(deleteDisplay())
   };
 };
 

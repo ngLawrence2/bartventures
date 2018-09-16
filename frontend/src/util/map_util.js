@@ -4,6 +4,7 @@ import axios from 'axios';
 export const RECEIVE_ATTRACTIONS="RECEIVE_ATTRACTIONS";
 export const RECEIVE_BUDGET_BART_STATIONS="RECEIVE_BUDGET_BART_STATIONS";
 export const DISPLAY_CLICKED_ATTRACTION = "DISPLAY_CLICKED_ATTRACTION";
+export const DELETE_DISPLAY = "DELETE_DISPLAY";
 export const GET_ERRORS = 'GET_ERRORS';
 
 
@@ -73,4 +74,15 @@ export const receiveMarkerAttraction = loc => {
 
 export const fetchMarkerAttraction = loc => dispatch => {
   dispatch(receiveMarkerAttraction(loc));
+}
+
+export const deleteAttractionDisplay = () => {
+  return {
+    type: DELETE_DISPLAY
+  }
+}
+
+
+export const deleteDisplay = () => dispatch => {
+  dispatch(deleteAttractionDisplay());
 }

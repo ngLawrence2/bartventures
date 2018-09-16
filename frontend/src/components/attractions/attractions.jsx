@@ -7,15 +7,26 @@ import attractions from '../seeds.jsx';
 class Attractions extends React.Component {
   constructor(props) {
     super(props);
+
+    this.getAttraction = this.getAttraction.bind(this);
   }
 
   getAttraction(loc) {
-    let result = this.props.attractions[0];
-    
+    for(let i = 0 ; i < this.props.attractions.length ; i++) {
+      let currentAttraction = this.props.attractions[i];
+
+      if(loc.lat === currentAttraction.lat && loc.lng === currentAttraction.lng) {
+        return currentAttraction;
+      }
+    }
   }
 
+
+
+
   render() {
-    const displayAttractions = this.props.attractions.map( (attr,idx) => {
+
+    let displayAttractions = this.props.attractions.map( (attr,idx) => {
       return (
         <div key = {idx} className="displayAttractions">
           <p className="attractions-name">{attr.name}</p>
@@ -25,6 +36,23 @@ class Attractions extends React.Component {
         </div>
       );
     });
+
+
+    if (this.props.display.length !== 0) {
+      let currentAttraction = this.getAttraction(this.props.display);
+      displayAttractions =
+      <div>
+        <button onClick={this.props.deleteDisplay}>Back to Index</button>
+        <div className="displayAttractions">
+          <p className="attractions-name">{currentAttraction.name}</p>
+            <img className="all-attraction-photos" src={ currentAttraction.image } />
+              <p className="attractions-desc">{currentAttraction.description}</p>
+          <br></br><br></br>
+        </div>
+      </div>
+    }
+
+
 
 
     return (
