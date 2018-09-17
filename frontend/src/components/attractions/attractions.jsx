@@ -39,7 +39,7 @@ class Attractions extends React.Component {
       );
     });
 
-  
+
     let currentAttraction = this.getAttraction(this.props.display);
     if (this.props.display.length !== 0 && currentAttraction!==undefined) {
       displayAttractions =
