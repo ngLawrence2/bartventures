@@ -12,10 +12,12 @@ class Attractions extends React.Component {
   }
 
   getAttraction(loc) {
+
     for(let i = 0 ; i < this.props.attractions.length ; i++) {
       let currentAttraction = this.props.attractions[i];
 
       if(loc.lat === currentAttraction.lat && loc.lng === currentAttraction.lng) {
+
         return currentAttraction;
       }
     }
@@ -37,9 +39,9 @@ class Attractions extends React.Component {
       );
     });
 
-
-    if (this.props.display.length !== 0) {
-      let currentAttraction = this.getAttraction(this.props.display);
+  
+    let currentAttraction = this.getAttraction(this.props.display);
+    if (this.props.display.length !== 0 && currentAttraction!==undefined) {
       displayAttractions =
       <div>
         <button onClick={this.props.deleteDisplay}>Back to Index</button>

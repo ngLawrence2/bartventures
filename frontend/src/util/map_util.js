@@ -16,7 +16,7 @@ export const getBartStations = (budget, currentBartStation) => dispatch => {
 
       dispatch(receiveBudgetBartStations(res))
       dispatch(receiveAttractions(res));
-    })
+    }).then( res => { dispatch(deleteDisplay()) })
     .catch(err => {
       console.log(err);
       dispatch({

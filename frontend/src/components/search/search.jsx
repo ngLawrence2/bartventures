@@ -25,6 +25,7 @@ class Search extends React.Component {
       return;
     }
     this.props.getBartStations(this.state.budget, this.state.value);
+
   }
 
   update(field) {

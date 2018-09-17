@@ -16,7 +16,7 @@ class SplashPage extends React.Component {
   render() {
     return  (
       <div>
-        <Search getBartStations={this.props.getBartStations} getAllBartStations={this.props.allBarts} loc={this.props.coords} clearErrors={this.props.clearErrors} />
+        <Search getBartStations={this.props.getBartStations} getAllBartStations={this.props.allBarts} loc={this.props.coords} clearErrors={this.props.clearErrors} deleteDisplay= {this.props.deleteDisplay}/>
         <BartMap location={this.props.allBartStations} bartMarkers ={this.props.bart} attractionMarkers={this.props.attractions} fetchDisplay={this.props.fetchMarkerAttraction} />
         <Attractions attractions={this.props.attractions} display = {this.props.displayed} deleteDisplay = {this.props.deleteDisplay}/>
       </div>
