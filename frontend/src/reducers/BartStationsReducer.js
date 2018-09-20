@@ -7,8 +7,8 @@ const BartStationsReducer = (state=[],action) => {
       return action.bartStations;
     default:
       return state;
-
   }
 }
 
+//comment for heroku
 export default BartStationsReducer;
