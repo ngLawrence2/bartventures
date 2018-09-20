@@ -13,14 +13,15 @@ const mapOptions = {
 
 class BartMap extends React.Component {
     constructor(props) {
-      super(props)
+      super(props);
+      let centerOfMap = this.props.center ;
+      let mapZoom = 10;
+
         this.state = {
-            center: {
-                lat: 37.773972,
-                lng: -122.431297
-            },
+            center: centerOfMap,
             zoom: 13
         };
+
     }
     // initMap() {
     //     () => (pull
@@ -33,11 +34,28 @@ class BartMap extends React.Component {
 
 
     render() {
-      
+        let that = this;
+        if (this.props.center === undefined || this.props.center.length==0) {
+          this.centerOfMap =  {
+              lat: 37.773972,
+              lng: -122.431297
+          };
+          this.mapZoom= 10;
+
+        } else {
+        
+          this.centerOfMap = {
+            lat: this.props.center.lat,
+            lng: this.props.center.lng
+          };
+          this.mapZoom= 13;
+        }
+
         const GoogleMapExample = withGoogleMap(props => (
             <GoogleMap
-            defaultCenter = { { lat: 37.773972, lng: -122.431297 }}
-            defaultZoom = { 10 }>
+            defaultCenter = { this.centerOfMap }
+            defaultZoom = { this.mapZoom }>
+
 
             { this.props.bartMarkers.map((bart, index)=> {
               let loc = { lat: bart.lat, lng: bart.lng};
@@ -47,7 +65,6 @@ class BartMap extends React.Component {
             options= {{icon: 'http://maps.google.com/mapfiles/marker_green.png'}}
             position={loc}
             title= {bart.name}
-            onClick={props.onMarkerClick}
           />
         )
       })}
@@ -60,10 +77,12 @@ class BartMap extends React.Component {
             key={index+"attr"}
             position={loc}
             title= {attr.name}
-            onClick={props.onMarkerClick}
+            onClick= {()=>that.props.fetchDisplay(loc)}
           />
+
         )
       })}
+
 
             </ GoogleMap>
         ))
@@ -73,7 +92,6 @@ class BartMap extends React.Component {
                 <GoogleMapExample className='google-map'
                             containerElement={<div className='map' style={{ width: `64%`, height: `87.5%`}}/> }
                             mapElement={ <div style={{height: `100%`}}/>}
-
 
                 />
                 <span className='disclaimer'>Bart Venture doesn't speak for Bart, and the sole purpose of this app is to provide
