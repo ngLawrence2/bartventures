@@ -20,6 +20,7 @@ class BartMap extends React.Component {
     //     );
     // }
 
+//comment
     render() {
 
         const GoogleMapExample = withGoogleMap(props => (
