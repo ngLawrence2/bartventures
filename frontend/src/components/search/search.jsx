@@ -21,12 +21,10 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-<<<<<<< HEAD
-=======
     if(this.state.budget === '' || isNaN(parseInt(this.state.budget)) || this.state.value==='start') {
       return;
     }
->>>>>>> e766eb80312f74a07fb0985daad1e9dfa152860a
+
     this.props.getBartStations(this.state.budget, this.state.value);
 
   }
