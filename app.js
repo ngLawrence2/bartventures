@@ -63,7 +63,7 @@ mongoose
     //             },
     //             {
     //               'name': "Dolores Park",
-    //               'Bartobj': {name: "Downtown Berkeley", abbr: "DBRK", lat: "37.870104", lng: "-122.268133"},
+    //               'Bartobj': {name: "16th St. Mission", abbr: "16TH", lat: "37.765062", lng: "-122.419694"},
     //               'lat': "37.7596",
     //               'lng': "-122.4269",
     //               'description': "Mission Dolores Park, often abbreviated to Dolores Park, is a Leave No Trace city park in San Francisco, California. Dolores Park offers several features including many tennis courts, a basketball court, a multi-purpose court, a soccer field, a pissoir, a children's playground, and a dog play area. The southern half of the park is also notable for its views of the Mission district, downtown, the San Francisco Bay and the East Bay.",

@@ -21,9 +21,15 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+<<<<<<< HEAD
+=======
+    if(this.state.budget === '' || isNaN(parseInt(this.state.budget)) || this.state.value==='start') {
+      return;
+    }
+>>>>>>> e766eb80312f74a07fb0985daad1e9dfa152860a
     this.props.getBartStations(this.state.budget, this.state.value);
-  }
 
+  }
 
   update(field) {
     return e => this.setState({[field]: e.currentTarget.value});
@@ -87,7 +93,6 @@ class Search extends React.Component {
 
 
 
-
   render() {
 
     const bartSelector = this.displayBartSelectorForm();
@@ -105,11 +110,5 @@ class Search extends React.Component {
     );
     }
 }
-//
-// export default geolocated({
-//   positionOptions: {
-//     enableHighAccuracy: false,
-//   },
-//   userDecisionTimeout: 5000,
-// })(Search);
+
 export default Search;
