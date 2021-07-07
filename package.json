@@ -24,6 +24,9 @@
   "bugs": {
     "url": "https://github.com/jingxia1219/Bart-guide-for-tourists/issues"
   },
+  "engines": {
+    "node": "v10.7.0"
+  },
   "homepage": "https://github.com/jingxia1219/Bart-guide-for-tourists#readme",
   "dependencies": {
     "axios": "^0.18.0",
